@@ -27,9 +27,16 @@ for i in inputFile.index:
 dp = df.groupby(['Source', 'Target'])['Data'].apply(' '.join).reset_index()
 print("Data Table created: Sentences combined")
 print(dp)
+print("Printing Data cleaned:")
+for idx, row in dp.iterrows():
+    strLine = row.Data
+    strLine = re.sub('\|',' ',strLine)
+    strLine = re.sub('\"', '', strLine)
+    strLine = re.sub('  ', ' ', strLine)
+    row.Data = strLine
+    #print(row.Data)
 
-
-
+print(dp)
 
 #for accessing ith row:
 #input.iloc[i]

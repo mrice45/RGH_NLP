@@ -1,5 +1,5 @@
 "RelationSymbolicName","Data"
-"positive MolSynthesis: FSH --+> testosterone", "THIS IS TEST DATA."
+"positive MolSynthesis: FSH --+> testosterone", "FSH is a promoter of testosterone"
 "positive MolSynthesis: estrogen --+> progesterone", "THIS IS TEST DATA."
 "positive MolSynthesis: testosterone --+> progesterone", "THIS IS TEST DATA.|Also Test Data."
 "positive MolSynthesis: progesterone --+> testosterone", "THIS IS TEST DATA.|Also Test Data."

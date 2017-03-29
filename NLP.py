@@ -2,6 +2,8 @@ import numpy
 import nltk
 import re
 import pandas as pd
+import wizard as oz
+
 
 '''
 Read in file. Currently this is only coming from Pathway Studio, so all of the manipulation is derived from that
@@ -11,7 +13,7 @@ formatting. So the following tools take that into consideration. This will one d
 fileOfInterest = input("Enter File Name:")
 print(fileOfInterest+" being opened.")
 
-inputFile = pd.read_csv(fileOfInterest);
+inputFile = pd.read_csv(fileOfInterest)
 print(len(inputFile.index))
 
 #Create DataFrame which will be used to manipulate data.
@@ -30,11 +32,11 @@ for i in inputFile.index:
     df_data = inputFile.iloc[i][1]
 
     df.loc[i] = [df_source, df_target, df_data]
-    print(inputFile.iloc[i][1])
+   # print(inputFile.iloc[i][1])
 
 dp = df.groupby(['Source', 'Target'])['Data'].apply(' '.join).reset_index()
 print("Data Table created: Sentences combined")
-print(dp)
+#print(dp)
 print("Printing Data cleaned:")
 for idx, row in dp.iterrows():
     strLine = row.Data
@@ -44,7 +46,20 @@ for idx, row in dp.iterrows():
     row.Data = strLine
     #print(row.Data)
 
-print(dp)
+#print(dp)
+
+text = dp.loc[0].Data
+split = oz.Splitter()
+postag = oz.POSTagger()
+
+print("Split Sentences NLP:")
+split_sent = split.split(text)
+print(split_sent)
+
+print("Tagged Sentences NLP:")
+pos_split_sent = postag.pos_tag(split_sent)
+print (pos_split_sent)
+
 
 
 #for accessing ith row:

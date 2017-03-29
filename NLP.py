@@ -1,5 +1,4 @@
 import numpy
-import nltk
 import re
 import pandas as pd
 import wizard as oz
@@ -48,7 +47,7 @@ for idx, row in dp.iterrows():
 
 #print(dp)
 
-text = dp.loc[0].Data
+text = dp.loc[2].Data
 split = oz.Splitter()
 postag = oz.POSTagger()
 
@@ -60,7 +59,22 @@ print("Tagged Sentences NLP:")
 pos_split_sent = postag.pos_tag(split_sent)
 print (pos_split_sent)
 
+print("Positive/Negative Tagging:")
+dicttag = oz.DictionaryTagger(['C:\\Users\mrice\PycharmProjects\RGH_NLP\postive.yml', 'C:\\Users\mrice\PycharmProjects\RGH_NLP\\negative.yml'])
 
+dict_tag_sent = dicttag.tag(pos_split_sent)
+print(dict_tag_sent)
+
+print("analyzing sentiment...")
+score = oz.sentiment_score(dict_tag_sent)
+if score > 0:
+    score_String = "positive"
+elif score < 0:
+    score_String = "negative"
+else:
+    score_String = "Ambiguous"
+
+print(score_String + " edge. Score was: " + str(score))
 
 #for accessing ith row:
 #input.iloc[i]

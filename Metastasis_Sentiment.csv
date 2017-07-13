@@ -1,0 +1,167 @@
+Source,Target,Polarity
+ALK,MAPK1,Negative
+ALK,non-small cell lung cancer,Negative
+BCL2,MAPK1,Positive
+BCL2,TP53,Negative
+BCL2,VEGFA,Positive
+BCL2,angiogenesis,Positive
+BCL2,epithelial to mesenchymal transition,Positive
+BCL2,metastasis,Positive
+BMI1,cell motility,Negative
+BMI1,epithelial to mesenchymal transition,Positive
+BMI1,metastasis,Positive
+CCR7,MAPK1,Positive
+CCR7,angiogenesis,Positive
+CCR7,cell motility,Positive
+CCR7,metastasis,Positive
+CD44,ERBB2,Positive
+CD44,HGF,Positive
+CD44,MAPK1,Positive
+CD44,MET,Positive
+CD44,MMP2,Positive
+CD44,PI3K,Negative
+CD44,TGFB1,Positive
+CD44,angiogenesis,Positive
+CD44,cell motility,Positive
+CD44,epithelial to mesenchymal transition,Positive
+CDH1,PI3K,Positive
+CDH1,angiogenesis,Negative
+CDH1,cell motility,Positive
+CDH1,epithelial to mesenchymal transition,Positive
+CDH1,metastasis,Positive
+CDH2,MAPK1,Positive
+CDH2,angiogenesis,Positive
+CDH2,cell motility,Positive
+CDH2,metastasis,Positive
+CXCR4,MAPK1,Positive
+CXCR4,PI3K,Positive
+CXCR4,VEGFA,Positive
+CXCR4,angiogenesis,Positive
+CXCR4,cell motility,Positive
+CXCR4,epithelial to mesenchymal transition,Positive
+CXCR4,metastasis,Positive
+ERBB2,CDH1,Negative
+ERBB2,PI3K,Positive
+ERBB2,VEGFA,Positive
+ERBB2,angiogenesis,Positive
+ERBB2,cell motility,Positive
+ERBB2,epithelial to mesenchymal transition,Positive
+ERBB2,metastasis,Positive
+EZH2,TP53,Positive
+EZH2,angiogenesis,Negative
+EZH2,epithelial to mesenchymal transition,Positive
+EZH2,metastasis,Positive
+FGF2,CD44,Positive
+FGF2,HGF,Positive
+FGF2,MAPK1,Positive
+FGF2,PI3K,Positive
+FGF2,TGFB1,Positive
+FGF2,VEGFA,Positive
+FGF2,angiogenesis,Positive
+FGF2,cell motility,Positive
+FGF2,epithelial to mesenchymal transition,Positive
+FGF2,metastasis,Positive
+GREM1,TGFB1,Negative
+GREM1,angiogenesis,Positive
+GREM1,epithelial to mesenchymal transition,Negative
+HGF,ECM degradation,Positive
+HGF,MAPK1,Negative
+HGF,MET,Negative
+HGF,PI3K,Positive
+HGF,VEGFA,Positive
+HGF,angiogenesis,Positive
+HGF,cell motility,Positive
+HGF,epithelial to mesenchymal transition,Negative
+HGF,metastasis,Positive
+KRAS,PI3K,Positive
+KRAS,cell motility,Positive
+KRAS,epithelial to mesenchymal transition,Positive
+KRAS,non-small cell lung cancer,Negative
+MAPK1,BCL2,Negative
+MAPK1,MMP2,Positive
+MAPK1,MMP9,Negative
+MAPK1,TGFB1,Positive
+MAPK1,TP53,Negative
+MAPK1,angiogenesis,Positive
+MAPK1,cell motility,Positive
+MAPK1,epithelial to mesenchymal transition,Negative
+MAPK1,metastasis,Negative
+MAPK1,p38,Negative
+MET,ERBB2,Negative
+MET,MAPK1,Positive
+MET,PI3K,Positive
+MET,angiogenesis,Positive
+MET,cell motility,Positive
+MET,epithelial to mesenchymal transition,Positive
+MET,metastasis,Positive
+MET,non-small cell lung cancer,Negative
+MMP1,ECM degradation,Positive
+MMP1,MMP2,Negative
+MMP1,angiogenesis,Positive
+MMP2,ECM degradation,Positive
+MMP2,MAPK1,Positive
+MMP2,MMP9,Negative
+MMP2,TGFB1,Positive
+MMP2,VEGFA,Positive
+MMP2,angiogenesis,Positive
+MMP2,cell motility,Positive
+MMP2,epithelial to mesenchymal transition,Positive
+MMP2,metastasis,Positive
+MMP9,CD44,Negative
+MMP9,ECM degradation,Positive
+MMP9,VEGFA,Positive
+MMP9,angiogenesis,Positive
+MMP9,cell motility,Positive
+MMP9,epithelial to mesenchymal transition,Positive
+MMP9,metastasis,Positive
+NODAL,angiogenesis,Positive
+NODAL,epithelial to mesenchymal transition,Positive
+PI3K,MMP9,Positive
+PI3K,VEGFA,Negative
+PI3K,angiogenesis,Negative
+PI3K,cell motility,Positive
+PI3K,epithelial to mesenchymal transition,Negative
+PI3K,metastasis,Positive
+RET,PI3K,Positive
+SMAD7,TGFB1,Negative
+SMAD7,angiogenesis,Negative
+SMAD7,epithelial to mesenchymal transition,Negative
+STK11,TP53,Positive
+STK11,angiogenesis,Negative
+STK11,metastasis,Positive
+TGFB1,ECM degradation,Negative
+TGFB1,FGF2,Positive
+TGFB1,HGF,Negative
+TGFB1,MMP2,Positive
+TGFB1,MMP9,Positive
+TGFB1,PI3K,Positive
+TGFB1,SMAD7,Positive
+TGFB1,VEGFA,Positive
+TGFB1,angiogenesis,Positive
+TGFB1,cell motility,Positive
+TGFB1,epithelial to mesenchymal transition,Positive
+TGFB1,metastasis,Positive
+TGFB1,non-small cell lung cancer,Negative
+TGFB1,p38,Positive
+TP53,BCL2,Positive
+TP53,CD44,Positive
+TP53,EZH2,Positive
+TP53,MMP2,Positive
+TP53,PI3K,Positive
+TP53,VEGFA,Positive
+TP53,angiogenesis,Negative
+TP53,cell motility,Positive
+TP53,epithelial to mesenchymal transition,Negative
+VEGFA,ECM degradation,Positive
+VEGFA,FGF2,Negative
+VEGFA,HGF,Positive
+VEGFA,MAPK1,Negative
+VEGFA,MET,Negative
+VEGFA,MMP2,Positive
+VEGFA,MMP9,Positive
+VEGFA,PI3K,Positive
+VEGFA,angiogenesis,Positive
+VEGFA,cell motility,Positive
+VEGFA,metastasis,Positive
+VEGFA,p38,Positive
+p38,TP53,Positive

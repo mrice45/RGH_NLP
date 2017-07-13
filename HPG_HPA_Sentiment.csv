@@ -1,0 +1,135 @@
+Source,Target,Polarity
+ACTH,CRH,Positive
+ACTH,GNRH1,Negative
+ACTH,cortisol,Positive
+ACTH,epinephrine,Positive
+ACTH,progesterone,Positive
+AVP,ACTH,Positive
+AVP,CRH,Positive
+AVP,KISS1,Positive
+AVP,cortisol,Positive
+AVP,norepinephrine,Positive
+CRH,ACTH,Positive
+CRH,AVP,Positive
+CRH,GNRH1,Negative
+CRH,IL6,Positive
+CRH,Luteinizing hormone,Negative
+CRH,OXT,Positive
+CRH,TNF,Positive
+CRH,cortisol,Positive
+CRH,epinephrine,Positive
+CRH,norepinephrine,Positive
+CRH,progesterone,Negative
+FSH,FST,Positive
+FSH,estrogen,Positive
+FSH,inhibin,Positive
+FSH,progesterone,Negative
+FST,FSH,Negative
+FST,activin,Negative
+FST,progesterone,Positive
+GNRH1,ACTH,Positive
+GNRH1,FSH,Positive
+GNRH1,FST,Positive
+GNRH1,KISS1,Positive
+GNRH1,Luteinizing hormone,Positive
+GNRH2,Luteinizing hormone,Positive
+IL1B,ACTH,Positive
+IL1B,AVP,Positive
+IL1B,CRH,Positive
+IL1B,IL6,Positive
+IL1B,Luteinizing hormone,Negative
+IL1B,OXT,Positive
+IL1B,TNF,Positive
+IL1B,cortisol,Positive
+IL1B,estrogen,Positive
+IL6,ACTH,Positive
+IL6,AVP,Positive
+IL6,CRH,Positive
+IL6,FST,Positive
+IL6,GNRH1,Negative
+IL6,OXT,Positive
+IL6,cortisol,Positive
+KISS1,GNRH1,Positive
+KISS1,Luteinizing hormone,Positive
+Luteinizing hormone,FSH,Negative
+Luteinizing hormone,FST,Negative
+Luteinizing hormone,estrogen,Positive
+Luteinizing hormone,inhibin,Positive
+Luteinizing hormone,progesterone,Positive
+OXT,GNRH1,Positive
+OXT,IL6,Negative
+OXT,Luteinizing hormone,Positive
+OXT,cortisol,Negative
+OXT,norepinephrine,Positive
+OXT,progesterone,Positive
+TNF,AVP,Positive
+TNF,CRH,Positive
+TNF,FST,Positive
+TNF,GNRH1,Negative
+TNF,IL1B,Positive
+TNF,IL6,Positive
+TNF,Luteinizing hormone,Negative
+TNF,norepinephrine,Negative
+activin,FST,Negative
+activin,GNRH1,Positive
+cortisol,ACTH,Negative
+cortisol,CRH,Positive
+cortisol,GNRH1,Negative
+cortisol,Luteinizing hormone,Negative
+cortisol,epinephrine,Positive
+cortisol,norepinephrine,Positive
+cortisol,progesterone,Positive
+epinephrine,ACTH,Positive
+epinephrine,AVP,Positive
+epinephrine,GNRH1,Positive
+epinephrine,IL1B,Positive
+epinephrine,IL6,Positive
+epinephrine,OXT,Negative
+epinephrine,TNF,Negative
+epinephrine,cortisol,Positive
+epinephrine,norepinephrine,Positive
+epinephrine,progesterone,Positive
+estrogen,ACTH,Positive
+estrogen,AVP,Positive
+estrogen,FSH,Negative
+estrogen,FST,Positive
+estrogen,GNRH1,Negative
+estrogen,IL1B,Negative
+estrogen,IL6,Negative
+estrogen,OXT,Positive
+estrogen,TNF,Negative
+estrogen,activin,Positive
+estrogen,progesterone,Positive
+inhibin,FSH,Negative
+inhibin,FST,Negative
+inhibin,activin,Positive
+inhibin,progesterone,Negative
+norepinephrine,ACTH,Positive
+norepinephrine,AVP,Positive
+norepinephrine,CRH,Positive
+norepinephrine,GNRH1,Positive
+norepinephrine,IL1B,Negative
+norepinephrine,IL6,Positive
+norepinephrine,Luteinizing hormone,Positive
+norepinephrine,OXT,Positive
+norepinephrine,TNF,Negative
+norepinephrine,cortisol,Positive
+norepinephrine,progesterone,Positive
+progesterone,CRH,Negative
+progesterone,GNRH1,Negative
+progesterone,OXT,Positive
+progesterone,TNF,Negative
+progesterone,cortisol,Positive
+progesterone,norepinephrine,Positive
+stress,ACTH,Positive
+stress,AVP,Positive
+stress,CRH,Positive
+stress,GNRH1,Negative
+stress,IL1B,Positive
+stress,IL6,Positive
+stress,OXT,Positive
+stress,TNF,Positive
+stress,cortisol,Positive
+stress,epinephrine,Positive
+stress,norepinephrine,Positive
+stress,progesterone,Positive

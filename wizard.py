@@ -1,4 +1,8 @@
-# -*- coding: utf-8 -*-
+
+# coding: utf-8
+
+# In[1]:
+
 """
 This module is based off of the below article:
 http://fjavieralba.com/basic-sentiment-analysis-with-python.html
@@ -22,9 +26,8 @@ class Splitter(object):
         output format: a list of lists of words.
             e.g.: [['this', 'is', 'a', 'sentence'], ['this', 'is', 'another', 'one']]
         """
-        sentences = self.nltk_splitter.tokenize(text)
-        tokenized_sentences = [self.nltk_tokenizer.tokenize(sent) for sent in sentences]
-        return tokenized_sentences
+        return [self.nltk_tokenizer.tokenize(sent) for sent in self.nltk_splitter.tokenize(text)]
+
 
 
 class POSTagger(object):
@@ -107,10 +110,10 @@ class DictionaryTagger(object):
         return tag_sentence
 
 
-def value_of(sentiment):
-        if sentiment == 'positive': return 1
-        if sentiment == 'negative': return -1
-        return 0
+def __value_of(sentiment):
+    if sentiment == 'positive': return 1
+    if sentiment == 'negative': return -1
+    return 0
 
 
 def sentence_score(sentence_tokens, previous_token, acum_score):
@@ -119,7 +122,7 @@ def sentence_score(sentence_tokens, previous_token, acum_score):
     else:
         current_token = sentence_tokens[0]
         tags = current_token[2]
-        token_score = sum([value_of(tag) for tag in tags])
+        token_score = sum([__value_of(tag) for tag in tags])
         if previous_token is not None:
             previous_tags = previous_token[2]
             #if 'inc' in previous_tags:
@@ -133,3 +136,22 @@ def sentence_score(sentence_tokens, previous_token, acum_score):
 
 def sentiment_score(review):
     return sum([sentence_score(sentence, None, 0.0) for sentence in review])
+
+
+def weighted_sentence_score(sentence_tokens):
+    tags = []
+    for x in range(len(sentence_tokens)):
+        tags.append(sentence_tokens[x][2])
+    return sum([__value_of(tag[0])/len(sentence_tokens) for tag in tags])
+
+
+
+def weighted_sentiment_score(review, matrix_flag):
+    if matrix_flag == True:
+        return [weighted_sentence_score(sentence) for sentence in review]
+    else:
+        return sum([weighted_sentence_score(sentence) for sentence in review])
+
+        #create weighted sentimenmt score
+
+        # Add subsample function to return a subsample of sentences from paragraph of relationship sentences.

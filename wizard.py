@@ -1,8 +1,5 @@
 
 # coding: utf-8
-
-# In[1]:
-
 """
 This module is based off of the below article:
 http://fjavieralba.com/basic-sentiment-analysis-with-python.html
@@ -11,7 +8,6 @@ I took what Javiar was doing and ran with it. A 1000 thanks mate :-)
 """
 
 import nltk
-import sys
 import yaml
 
 class Splitter(object):
@@ -151,7 +147,3 @@ def weighted_sentiment_score(review, matrix_flag):
         return [weighted_sentence_score(sentence) for sentence in review]
     else:
         return sum([weighted_sentence_score(sentence) for sentence in review])
-
-        #create weighted sentimenmt score
-
-        # Add subsample function to return a subsample of sentences from paragraph of relationship sentences.

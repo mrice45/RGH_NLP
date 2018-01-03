@@ -29,7 +29,8 @@ def pos_tag(self, sentences):
     output format: list of lists of tagged tokens. Each tagged tokens has a
     form, a lemma, and a list of tags
         e.g: [[('this', 'this', ['DT']), ('is', 'be', ['VB']), ('a', 'a', ['DT']), ('sentence', 'sentence', ['NN'])],
-                [('this', 'this', ['DT']), ('is', 'be', ['VB']), ('another', 'another', ['DT']), ('one', 'one', ['CARD'])]]
+                [('this', 'this', ['DT']), ('is', 'be', ['VB']), ('another', 'another', ['DT']),
+                ('one', 'one', ['CARD'])]]
     """
 
     pos = [nltk.pos_tag(sentence) for sentence in sentences]
@@ -143,3 +144,4 @@ def weighted_sentiment_score(review, matrix_flag):
         return [weighted_sentence_score(sentence) for sentence in review]
     else:
         return sum([weighted_sentence_score(sentence) for sentence in review])
+

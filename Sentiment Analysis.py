@@ -6,27 +6,9 @@ import sentiment_analysis
 """network_csv = pd.read_csv(input('Enter Filename:'))  #Read in file,error checking will come later. 
 For now, I trust me."""
 network_csv = pd.read_csv('RIG-I reduced.csv', encoding='UTF-16')
-network_csv
 
 """Conform Data"""
-network = pd.DataFrame(columns=['Source', 'Target', 'Data'])
 
-for i in network_csv.index:
-    strLine = network_csv.iloc[i]['RelationSymbolicName']
-    m = re.search('(?<=: ).*', strLine)
-    strLine = m.group()
-    m = re.search('.*(?= --)', strLine)
-    df_source = m.group()
-    m = re.search('(?<=[>|] ).*', strLine)
-    df_target = m.group()
-    df_data = network_csv.iloc[i]['msrc']
-
-    network.loc[i] = [df_source, df_target, df_data]
-
-network['RefNo'] = network_csv.RelationNumberOfReferences
-network['PS_Polarity'] = network_csv.Effect
-network['Duplicated'] = False
-network2 = network
 
 dict_tag = sentiment_analysis.DictionaryTagger(['postive.yml', 'negative.yml', 'inv.yml'])
 

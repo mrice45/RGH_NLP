@@ -89,6 +89,17 @@ def ps_flag_duplicates(network):
         raise Exception("Duplicated col not present")
 
 
+def ps_drop_duplicates(network):
+    """
+
+    :param network:
+    :return:
+    """
+    dupes = network[network.duplicated(subset=['Source', 'Target'], keep=False)].index
+    network.drop(dupes)
+    return network.reset_index()
+
+
 def ps_clean_ref(network):
     """
     Take in network, clean ALL references column of PS tags
@@ -141,12 +152,15 @@ def __ps_find_subject(s):
     return matchobj.group(0)
 
 
-def ps_write_csv(network, csv_name='network_please_rename.csv'):
+def ps_write_csv(network, csv_name='network_please_rename.csv', exlude_unknown=False):
     """
     Write network, formatted to CSV
 
     :param network: network to be written to csv.
     :param csv_name: Name for new file, defaulted 'network_please_rename.csv'
+    :param exlude_unknown: flag to exclude rows where Polarity is unknown
     :return: none
     """
     network.to_csv(csv_name, encoding="UTF-16")
+    if exlude_unknown:
+        network[network['Polarity'] != 'unknown'].reset_index().to_csv(csv_name, encoding="UTF-16")

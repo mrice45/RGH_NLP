@@ -22,7 +22,7 @@ def split(text):
     return [nltk_tokenizer.tokenize(sent) for sent in nltk_splitter.tokenize(text)]
 
 
-def pos_tag(self, sentences):
+def pos_tag(sentences):
     """
     input format: list of lists of words
         e.g.: [['this', 'is', 'a', 'sentence'], ['this', 'is', 'another', 'one']]
@@ -40,7 +40,14 @@ def pos_tag(self, sentences):
 
 
 class DictionaryTagger(object):
+    """
+
+    """
     def __init__(self, dictionary_paths):
+        """
+
+        :param dictionary_paths:
+        """
         files = [open(path, 'r') for path in dictionary_paths]
         dictionaries = [yaml.load(dict_file) for dict_file in files]
         map(lambda x: x.close(), files)
@@ -55,6 +62,11 @@ class DictionaryTagger(object):
                     self.max_key_size = max(self.max_key_size, len(key))
 
     def tag(self, postagged_sentences):
+        """
+
+        :param postagged_sentences:
+        :return:
+        """
         return [self.tag_sentence(sentence) for sentence in postagged_sentences]
 
     def tag_sentence(self, sentence, tag_with_lemmas=False):
@@ -72,11 +84,11 @@ class DictionaryTagger(object):
             self.max_key_size = N
         i = 0
 
-        while (i < N):
+        while i < N:
             j = min(i + self.max_key_size, N)  # avoid overflow
             tagged = False
 
-            while (j > i):
+            while j > i:
                 expression_form = ' '.join([word[0] for word in sentence[i:j]]).lower()
                 expression_lemma = ' '.join([word[1] for word in sentence[i:j]]).lower()
 
@@ -105,12 +117,62 @@ class DictionaryTagger(object):
 
 
 def __value_of(sentiment):
+    """
+
+    :param sentiment:
+    :return:
+    """
     if sentiment == 'positive': return 1
     if sentiment == 'negative': return -1
     return 0
 
 
+def network_score(network, add_polarity=True, flag_changes=True):
+    """
+
+    :param network:
+    :param add_polarity:
+    :param flag_changes:
+    :return:
+    """
+    score = []
+    for chunk in network['Data']:
+        split_sentences = split(chunk)
+        pos_sentences = pos_tag(split_sentences)
+        tagged_sentences = DictionaryTagger(['positive.yml', 'negative.yml', 'inv.yml']).tag(pos_sentences)
+        relationship_score = sentiment_score(tagged_sentences)
+
+        score.append(relationship_score)
+
+    network['Sentiment Score'] = score
+
+    if add_polarity:
+        polarity = []
+        for sc in score:
+            if sc > 0:
+                polarity.append('positive')
+            elif sc < 0:
+                polarity.append('negative')
+            else:
+                polarity.append('unknown')
+
+        network['Polarity'] = polarity
+
+    if flag_changes:
+        network.loc[network['Polarity'] != network['PS_Polarity'], 'Polarity_Changed'] = True
+        network.loc[network['Polarity'] == network['PS_Polarity'], 'Polarity_Changed'] = False
+
+    return network
+
+
 def sentence_score(sentence_tokens, previous_token, acum_score):
+    """
+
+    :param sentence_tokens:
+    :param previous_token:
+    :param acum_score:
+    :return:
+    """
     if not sentence_tokens:
         return acum_score
     else:
@@ -129,10 +191,20 @@ def sentence_score(sentence_tokens, previous_token, acum_score):
 
 
 def sentiment_score(review):
+    """
+
+    :param review:
+    :return:
+    """
     return sum([sentence_score(sentence, None, 0.0) for sentence in review])
 
 
 def weighted_sentence_score(sentence_tokens):
+    """
+
+    :param sentence_tokens:
+    :return:
+    """
     tags = []
     for x in range(len(sentence_tokens)):
         tags.append(sentence_tokens[x][2])
@@ -140,8 +212,13 @@ def weighted_sentence_score(sentence_tokens):
 
 
 def weighted_sentiment_score(review, matrix_flag):
+    """
+
+    :param review:
+    :param matrix_flag:
+    :return:
+    """
     if matrix_flag:
         return [weighted_sentence_score(sentence) for sentence in review]
     else:
         return sum([weighted_sentence_score(sentence) for sentence in review])
-

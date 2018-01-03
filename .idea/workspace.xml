@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3032237c-b099-4b60-8239-25de1429453f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/PathwayStudioDataTools.py" afterPath="$PROJECT_DIR$/PathwayStudioDataTools.py" />
-      <change beforePath="$PROJECT_DIR$/negative.yml" afterPath="$PROJECT_DIR$/negative.yml" />
-      <change beforePath="$PROJECT_DIR$/postive.yml" afterPath="$PROJECT_DIR$/postive.yml" />
-      <change beforePath="$PROJECT_DIR$/wizard.py" afterPath="$PROJECT_DIR$/wizard.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/PathwayStudioDataTools.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
-              <caret line="25" column="56" lean-forward="false" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+              <caret line="25" column="55" lean-forward="false" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
               <folding>
                 <element signature="e#124#133#0" expanded="true" />
               </folding>
@@ -152,7 +148,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHubDesktop/app-1.0.3/resources/app/git/mingw64/bin/git.exe" />
   </component>
   <component name="RecentsManager">
@@ -453,15 +449,21 @@
       <option name="project" value="LOCAL" />
       <updated>1509838895441</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Updated wizard.py to be more pythonic. Added more words of interest to pos and neg, added docstrings to PSDT, as well as a write_csv function">
+      <created>1514940037939</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1514940037939</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32847276" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30328867" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -495,7 +497,8 @@
     <MESSAGE value="Added comments, and updated sentiment libraries. updated test data for NLP testing." />
     <MESSAGE value="Started NLP implementation" />
     <MESSAGE value="Rudimentary Sentiment Analysis" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rudimentary Sentiment Analysis" />
+    <MESSAGE value="Updated wizard.py to be more pythonic. Added more words of interest to pos and neg, added docstrings to PSDT, as well as a write_csv function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated wizard.py to be more pythonic. Added more words of interest to pos and neg, added docstrings to PSDT, as well as a write_csv function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -802,7 +805,7 @@
     <entry file="file://$PROJECT_DIR$/PathwayStudioDataTools.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="25" column="56" lean-forward="false" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+          <caret line="25" column="55" lean-forward="false" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
           <folding>
             <element signature="e#124#133#0" expanded="true" />
           </folding>

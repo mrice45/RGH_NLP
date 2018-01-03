@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3032237c-b099-4b60-8239-25de1429453f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/other.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/RGH_NLP.iml" afterPath="$PROJECT_DIR$/.idea/RGH_NLP.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/wizard.py" afterPath="$PROJECT_DIR$/sentiment_analysis.py" />
-    </list>
+    <list default="true" id="3032237c-b099-4b60-8239-25de1429453f" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -460,7 +455,14 @@
       <option name="project" value="LOCAL" />
       <updated>1514940037939</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Renamed wizard, to sentiment_analysis. Pulled in Sentiment Analysis from&#10;Jupyter, refactored.">
+      <created>1514943898420</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1514943898420</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -504,7 +506,8 @@
     <MESSAGE value="Started NLP implementation" />
     <MESSAGE value="Rudimentary Sentiment Analysis" />
     <MESSAGE value="Updated wizard.py to be more pythonic. Added more words of interest to pos and neg, added docstrings to PSDT, as well as a write_csv function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated wizard.py to be more pythonic. Added more words of interest to pos and neg, added docstrings to PSDT, as well as a write_csv function" />
+    <MESSAGE value="Renamed wizard, to sentiment_analysis. Pulled in Sentiment Analysis from&#10;Jupyter, refactored." />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed wizard, to sentiment_analysis. Pulled in Sentiment Analysis from&#10;Jupyter, refactored." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

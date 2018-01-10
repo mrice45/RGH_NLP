@@ -15,6 +15,7 @@ def db_connect(dbfile):
 
     return curs,conn
 
+
 def __db_buildquery(search_terms):
     """
 
@@ -25,11 +26,17 @@ def __db_buildquery(search_terms):
     placeholder = '?'  # For SQLite. See DBAPI paramstyle.
     placeholders = ', '.join(placeholder for x in search_terms)
 
-
-    query = 'WITH targetDrugs AS (SELECT d.Id drugId FROM Target t JOIN DrugTarget dt ON t.Id = dt.TargetId ' \
-            'JOIN Drug d ON dt.DrugId = d.Id WHERE t.Name IN (%s)) SELECT d.Name AS Drug, dt.Actions ' \
-            'AS Action, t.Name AS Target FROM Target t JOIN DrugTarget dt ON t.Id = dt.TargetId JOIN Drug d ' \
-            'ON dt.DrugId = d.Id JOIN targetDrugs td ON d.Id = td.drugId' % placeholders
+    query = 'WITH targetDrugs AS (SELECT d.Id drugId FROM Target t ' \
+            'JOIN DrugTarget dt ON t.Id = dt.TargetId ' \
+            'JOIN Drug d ON dt.DrugId = d.Id ' \
+            'JOIN TargetSynonym TS ON t.Id = TS.TargetId ' \
+            'WHERE TS.Synonym IN (%s))' \
+            'SELECT DISTINCT d.Name AS Drug, dt.Actions AS Action, t.Name AS Target ' \
+            'FROM Target t ' \
+            'JOIN DrugTarget dt ON t.Id = dt.TargetId ' \
+            'JOIN Drug d ON dt.DrugId = d.Id ' \
+            'JOIN targetDrugs td ' \
+            'ON d.Id = td.drugId' % placeholders
 
     return query
 
@@ -56,3 +63,12 @@ def db_findtarget_bysynonym():
 
 
 def db_finddrug_bysynonym():
+    pass
+
+
+def db_addsynonymbylist():
+    pass
+
+
+
+

@@ -17,7 +17,7 @@ def ps_read_csv(filename, ps_format=True):
     rawdata = pd.read_csv(filename)
 
     if ps_format:
-        network = __ps_dataframe(rawdata)
+        network = __ps_networkdataframe(rawdata)
         network = ps_clean_ref(network)
         return network
 
@@ -25,7 +25,17 @@ def ps_read_csv(filename, ps_format=True):
         return rawdata
 
 
-def __ps_dataframe(rawdata):
+def ps_read_entitylist(filename):
+    """
+
+    :param filename:
+    :return:
+    """
+    entitylist = pd.read_csv(filename)
+    return entitylist[['Name', 'Alias']]
+
+
+def __ps_networkdataframe(rawdata):
     """
     Internal function to format raw PS to formatted DataFrame
     :param rawdata: Raw PS dataframe

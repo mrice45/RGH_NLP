@@ -41,6 +41,10 @@ def __db_buildquery(search_terms):
     return query
 
 
+def __splitterms(search_terms):
+    return search_terms.split(';')
+
+
 def db_findrelations(cursor, search_terms):
     """
 
@@ -48,12 +52,18 @@ def db_findrelations(cursor, search_terms):
     :param search_terms:
     :return:
     """
+
+    if isinstance(search_terms, str):
+        search_terms = __splitterms(search_terms)
+
     q = __db_buildquery(search_terms)
 
     search_terms = tuple([i for i in search_terms])
 
     cursor.execute(q, search_terms)
     relations = cursor.fetchall()
+
+    relations = [list(i) for i in relations]
 
     return relations
 

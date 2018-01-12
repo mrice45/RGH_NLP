@@ -14,6 +14,7 @@ def ps_read_csv(filename, ps_format=True):
     :param ps_format: Boolean to format PS raw to cleaned
     :return: Raw pandas DataFrame, or cleaned pandas DF
     """
+
     rawdata = pd.read_csv(filename)
 
     if ps_format:
@@ -27,10 +28,11 @@ def ps_read_csv(filename, ps_format=True):
 
 def ps_read_entitylist(filename):
     """
-
-    :param filename:
-    :return:
+    Read the Pathway Studio Entity List file export
+    :param filename: path/to/file
+    :return: pandas DataFrame of Name and Alias
     """
+
     entitylist = pd.read_csv(filename)
     return entitylist[['Name', 'Alias']]
 
@@ -41,6 +43,7 @@ def __ps_networkdataframe(rawdata):
     :param rawdata: Raw PS dataframe
     :return: formatted DataFrame
     """
+
     network = pd.DataFrame(columns=['Source', 'Target', 'Data'])
 
     for i in rawdata.index:
@@ -101,9 +104,9 @@ def ps_flag_duplicates(network):
 
 def ps_drop_duplicates(network):
     """
-
+    Drops Duplicates from network
     :param network:
-    :return:
+    :return: network df minus the duplicates
     """
     dupes = network[network.duplicated(subset=['Source', 'Target'], keep=False)].index
     network.drop(dupes)
@@ -162,7 +165,7 @@ def __ps_find_subject(s):
     return matchobj.group(0)
 
 
-def ps_write_csv(network, csv_name='network_please_rename.csv', exlude_unknown=False):
+def ps_write_csv(network, csv_name='network_please_rename.csv', exclude_unknown=False):
     """
     Write network, formatted to CSV
 
@@ -172,5 +175,5 @@ def ps_write_csv(network, csv_name='network_please_rename.csv', exlude_unknown=F
     :return: none
     """
     network.to_csv(csv_name, encoding="UTF-16")
-    if exlude_unknown:
+    if exclude_unknown:
         network[network['Polarity'] != 'unknown'].reset_index().to_csv(csv_name, encoding="UTF-16")

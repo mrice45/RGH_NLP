@@ -3,8 +3,12 @@ from DataTools import network_datatools as nw, ps_datatools as ps, DB_datatools 
 [curs, conn] = db.db_connect('drugbank_1_9.db')
 alias_list = nw.findaliases(ps.ps_read_entitylist('CFS_entities.csv'))
 
-print(type(alias_list[26]))
+answers = []
+# for i in alias_list:
+#     answers.append(db.db_findrelations(curs, i))
+#     print(i)
 
-answers = db.db_findrelations(curs, alias_list[26])
+test = db.db_findtargetsynonyms(curs, 'Adrenocorticotropic hormone receptor')
+db.closeconnections(conn, curs)
 
-print(answers)
+answers

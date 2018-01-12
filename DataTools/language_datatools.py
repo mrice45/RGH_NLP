@@ -41,11 +41,11 @@ def pos_tag(sentences):
 
 class DictionaryTagger(object):
     """
-
+        Class to tag sentences
     """
     def __init__(self, dictionary_paths):
         """
-
+            Opens YAML files and instantiates object of type DictionaryTagger
         :param dictionary_paths:
         """
         files = [open(path, 'r') for path in dictionary_paths]
@@ -63,9 +63,9 @@ class DictionaryTagger(object):
 
     def tag(self, postagged_sentences):
         """
-
+            Tags sentences with internal tags for positive and negative
         :param postagged_sentences:
-        :return:
+        :return: tagged sentences
         """
         return [self.tag_sentence(sentence) for sentence in postagged_sentences]
 
@@ -118,7 +118,7 @@ class DictionaryTagger(object):
 
 def __value_of(sentiment):
     """
-
+        Internal method to quantify polarity
     :param sentiment:
     :return:
     """
@@ -129,11 +129,11 @@ def __value_of(sentiment):
 
 def network_score(network, add_polarity=True, flag_changes=True):
     """
-
+    Runs Sentiment analysis on a network and returns an analyzed and scored network.
     :param network:
     :param add_polarity:
     :param flag_changes:
-    :return:
+    :return: scored network
     """
     score = []
     for chunk in network['Data']:
@@ -167,7 +167,7 @@ def network_score(network, add_polarity=True, flag_changes=True):
 
 def sentence_score(sentence_tokens, previous_token, acum_score):
     """
-
+        scores sentences thats been tagged.
     :param sentence_tokens:
     :param previous_token:
     :param acum_score:
@@ -192,7 +192,7 @@ def sentence_score(sentence_tokens, previous_token, acum_score):
 
 def sentiment_score(review):
     """
-
+    Returns cumulative score of scored sentences
     :param review:
     :return:
     """
@@ -201,9 +201,9 @@ def sentiment_score(review):
 
 def weighted_sentence_score(sentence_tokens):
     """
-
+    Weighted score...
     :param sentence_tokens:
-    :return:
+    :return: Totally arbitrary weight based on hokey pokey
     """
     tags = []
     for x in range(len(sentence_tokens)):
@@ -213,10 +213,10 @@ def weighted_sentence_score(sentence_tokens):
 
 def weighted_sentiment_score(review, matrix_flag):
     """
-
+        Totally arbitrary weight based on hokey pokey
     :param review:
     :param matrix_flag:
-    :return:
+    :return: Totally arbitrary weight based on hokey pokey
     """
     if matrix_flag:
         return [weighted_sentence_score(sentence) for sentence in review]

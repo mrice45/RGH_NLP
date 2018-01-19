@@ -1,4 +1,7 @@
 import pandas as pd
+import numpy as np
+import re
+import math
 
 
 def findnetworknodes(network):
@@ -18,3 +21,7 @@ def findaliases(entitylist):
     :return: List of [Name, Alias]
     """
     return (entitylist[['Name', 'Alias']].apply(lambda x: ';'.join(x), axis=1)).tolist()
+
+
+def perceptronify(network, indegree_max= 8):
+    pass

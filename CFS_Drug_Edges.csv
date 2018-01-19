@@ -1,0 +1,332 @@
+Source,Interaction,Target
+Tetracosactide,antagonist,ACTH
+Corticotropin,agonist,ACTH
+Corticotropin,agonist,CRH
+Desmopressin,agonist,AVP
+Vasopressin,agonist,AVP
+Conivaptan,antagonist,AVP
+Terlipressin,agonist,AVP
+Tolvaptan,antagonist,AVP
+Corticotropin,agonist,ACTH
+Corticotropin,agonist,CRH
+Vinblastine,other/unknown,CXCL8
+Vinblastine,adduct,CXCL8
+Menotropins,,GNRH1
+Menotropins,binder,FSH
+Follitropin,agonist,FSH
+Urofollitropin,agonist,FSH
+Choriogonadotropin alfa,,GNRH1
+Choriogonadotropin alfa,binder,FSH
+Suramin,antagonist,FSH
+Somatotropin,binder,cortisol
+Somatotropin,,GNRH1
+Pegvisomant,antagonist,cortisol
+Leuprolide,agonist,GNRH1
+Goserelin,agonist,GNRH1
+Goserelin,agonist,GNRH1
+Cetrorelix,,GNRH1
+Cetrorelix,antagonist,GNRH1
+Abarelix,antagonist,GNRH1
+Gonadorelin,agonist,GNRH1
+Gonadorelin,agonist,GNRH2
+Nafarelin,agonist,GNRH1
+Nafarelin,agonist,GNRH2
+Danazol,agonist,ACTH
+Danazol,negative modulator,GNRH1
+Danazol,negative modulator,GNRH2
+Danazol,agonist,ACTH
+Degarelix,antagonist,GNRH1
+Buserelin,,GNRH1
+Buserelin,,GNRH1
+Ganirelix,antagonist,GNRH1
+Histrelin,agonist,GNRH1
+Triptorelin,agonist,GNRH1
+Gonadorelin,agonist,GNRH1
+Gonadorelin,agonist,GNRH2
+Nafarelin,agonist,GNRH1
+Nafarelin,agonist,GNRH2
+Danazol,agonist,ACTH
+Danazol,negative modulator,GNRH1
+Danazol,negative modulator,GNRH2
+Danazol,agonist,ACTH
+Interferon gamma-1b,binder,IFNG
+Olsalazine,,IFNG
+Glucosamine,,TNF
+Glucosamine,,IFNG
+Apremilast,,epinephrine
+Apremilast,,TNF
+Apremilast,,IFNG
+Apremilast,,IL2
+Insulin Human,agonist,IGF1
+Insulin Human,,IGF1
+Insulin Human,,ACTH
+Insulin Human,,TNF
+Insulin Lispro,agonist,IGF1
+Insulin Lispro,,IGF1
+Insulin Glargine,agonist,IGF1
+Insulin Glargine,agonist,IGF1
+Insulin Pork,binder,IGF1
+Insulin Pork,,IGF1
+Insulin Pork,,ACTH
+Insulin Pork,,TNF
+Mecasermin,,IGF1
+Mecasermin,agonist,IGF1
+Secukinumab,antagonist,IL17A
+Ixekizumab,antibody,IL17A
+Anakinra,antagonist,IL1A
+Rilonacept,binder,IL1B
+Rilonacept,binder,IL1A
+Minocycline,negative modulator,progesterone
+Minocycline,modulator,IL1B
+Gallium nitrate,antagonist,IL1B
+Canakinumab,binder,IL1B
+Rilonacept,binder,IL1B
+Rilonacept,binder,IL1A
+Pseudoephedrine,inhibitor,dopamine
+Pseudoephedrine,,TNF
+Pseudoephedrine,inhibitor,cortisol
+Pseudoephedrine,,IL2
+Apremilast,,epinephrine
+Apremilast,,TNF
+Apremilast,,IFNG
+Apremilast,,IL2
+Ustekinumab,,IL23
+Ginseng,inhibitor,PTGS2
+Ginseng,antagonist,IL6
+Ginseng,agonist,epinephrine
+Crizotinib,inhibitor,IL6
+Cabozantinib,antagonist,IL6
+Siltuximab,"antagonist, antibody",IL6
+Insulin Human,agonist,IGF1
+Insulin Human,,IGF1
+Insulin Human,,ACTH
+Insulin Human,,TNF
+Insulin Lispro,agonist,IGF1
+Insulin Lispro,,IGF1
+Insulin Glargine,agonist,IGF1
+Insulin Glargine,agonist,IGF1
+Insulin Pork,binder,IGF1
+Insulin Pork,,IGF1
+Insulin Pork,,ACTH
+Insulin Pork,,TNF
+Mecasermin,,IGF1
+Mecasermin,agonist,IGF1
+Insulin Aspart,agonist,IGF1
+Insulin Detemir,agonist,IGF1
+Insulin Glulisine,agonist,IGF1
+Zinc,cofactor,ACTH
+Zinc,,cortisol
+Zinc,cofactor,cortisol
+Zinc,,CXCL8
+Zinc,,levothyroxine
+Zinc,,ACTH
+Zinc,,glutamate
+Zinc,,CXCL8
+Zinc,cofactor,GH1
+Zinc,cofactor,TNFSF13B
+Zinc,,IGF1
+Zinc,,cortisol
+Zinc,,KISS1
+Zinc,,IL10
+Zinc,,IGF1
+Zinc,,ACTH
+Zinc,,epinephrine
+Zinc,,NO
+Zinc,,IL1B
+Zinc,,TNFSF13B
+Zinc,,TGFB1
+Zinc,,ACTH
+Chromic chloride,activator,IGF1
+Insulin Degludec,ligand,IGF1
+Goserelin,agonist,GNRH1
+Goserelin,agonist,GNRH1
+Menotropins,,GNRH1
+Menotropins,binder,FSH
+Lutropin alfa,agonist,GNRH1
+Cetrorelix,,GNRH1
+Cetrorelix,antagonist,GNRH1
+Choriogonadotropin alfa,,GNRH1
+Choriogonadotropin alfa,binder,FSH
+Buserelin,,GNRH1
+Buserelin,,GNRH1
+Chorionic Gonadotropin (Human),ligand,GNRH1
+Oxytocin,binder,ACTH
+Oxytocin,agonist,ACTH
+Carbetocin,agonist,ACTH
+Etonogestrel,agonist,ACTH
+Etonogestrel,agonist,ACTH
+Desogestrel,agonist,ACTH
+Desogestrel,agonist,ACTH
+Megestrol acetate,agonist,ACTH
+Megestrol acetate,agonist,PTGS2
+Levonorgestrel,other,ACTH
+Levonorgestrel,binder,ACTH
+Dydrogesterone,agonist,ACTH
+Progesterone,agonist,ACTH
+Progesterone,agonist,ACTH
+Progesterone,antagonist,CRH
+Progesterone,partial agonist,PTGS2
+Spironolactone,agonist,ACTH
+Spironolactone,antagonist,CRH
+Spironolactone,antagonist,PTGS2
+Lindane,,ACTH
+Lindane,,ACTH
+Fluticasone propionate,agonist,ACTH
+Fluticasone propionate,antagonist,CRH
+Fluticasone propionate,agonist,PTGS2
+Medroxyprogesterone acetate,agonist,ACTH
+Medroxyprogesterone acetate,agonist,ACTH
+Mitotane,,ACTH
+Mitotane,,ACTH
+Norethisterone,agonist,ACTH
+Mometasone,agonist,ACTH
+Mometasone,agonist,PTGS2
+Ethynodiol diacetate,agonist,ACTH
+Ethynodiol diacetate,agonist,ACTH
+Mifepristone,antagonist,ACTH
+Mifepristone,antagonist,PTGS2
+Mifepristone,,epinephrine
+Norgestimate,agonist,ACTH
+Norgestimate,agonist,ACTH
+Drospirenone,agonist,ACTH
+Drospirenone,antagonist,CRH
+Danazol,agonist,ACTH
+Danazol,negative modulator,GNRH1
+Danazol,negative modulator,GNRH2
+Danazol,agonist,ACTH
+Oxybenzone,,ACTH
+Oxybenzone,antagonist,ACTH
+Allylestrenol,agonist,ACTH
+Allylestrenol,agonist,ACTH
+Norelgestromin,agonist,ACTH
+Hydroxyprogesterone caproate,agonist,ACTH
+Ulipristal,modulator,ACTH
+Ulipristal,antagonist,PTGS2
+Dienogest,agonist,ACTH
+Norgestrel,binder,ACTH
+Homosalate,,ACTH
+Homosalate,antagonist,ACTH
+Enzacamene,,ACTH
+Enzacamene,antagonist,ACTH
+Dihomo-gamma-linolenic acid,,PTGS2
+Icosapent,inhibitor,PTGS2
+Aminosalicylic Acid,inhibitor,PTGS2
+Mesalazine,inhibitor,PTGS2
+Mesalazine,,cortisol
+Mesalazine,,cortisol
+Acetaminophen,inhibitor,PTGS2
+Indomethacin,inhibitor,PTGS2
+Nabumetone,inhibitor,PTGS2
+Ketorolac,inhibitor,PTGS2
+Tenoxicam,inhibitor,PTGS2
+Lenalidomide,negative modulator,PTGS2
+Celecoxib,inhibitor,PTGS2
+Celecoxib,inhibitor,TNF
+Tolmetin,inhibitor,PTGS2
+Piroxicam,inhibitor,PTGS2
+Fenoprofen,inhibitor,PTGS2
+Diclofenac,inhibitor,PTGS2
+Sulindac,inhibitor,PTGS2
+Sulindac,inhibitor,ACTH
+Flurbiprofen,inhibitor,PTGS2
+Etodolac,inhibitor,PTGS2
+Mefenamic acid,inhibitor,PTGS2
+Naproxen,inhibitor,PTGS2
+Sulfasalazine,inhibitor,cortisol
+Sulfasalazine,inhibitor,PTGS2
+Phenylbutazone,inhibitor,PTGS2
+Meloxicam,inhibitor,PTGS2
+Carprofen,inhibitor,PTGS2
+Diflunisal,inhibitor,PTGS2
+Suprofen,inhibitor,PTGS2
+Salicylic acid,inhibitor,PTGS2
+Meclofenamic acid,inhibitor,PTGS2
+Acetylsalicylic acid,inhibitor,PTGS2
+Acetylsalicylic acid,,ACTH
+Bromfenac,inhibitor,PTGS2
+Oxaprozin,inhibitor,PTGS2
+Ketoprofen,inhibitor,PTGS2
+Balsalazide,inhibitor,PTGS2
+Thalidomide,antagonist,PTGS2
+Thalidomide,inhibitor,TNF
+Thalidomide,intercalation,FST
+Ibuprofen,inhibitor,PTGS2
+Ibuprofen,modulator,AVP
+Lumiracoxib,inhibitor,PTGS2
+Magnesium salicylate,inhibitor,PTGS2
+Salsalate,inhibitor,PTGS2
+Choline magnesium trisalicylate,inhibitor,PTGS2
+Ginseng,inhibitor,PTGS2
+Ginseng,antagonist,IL6
+Ginseng,agonist,epinephrine
+Antrafenine,inhibitor,PTGS2
+Antipyrine,inhibitor,PTGS2
+Tiaprofenic acid,inhibitor,PTGS2
+Etoricoxib,inhibitor,PTGS2
+Resveratrol,,ACTH
+Resveratrol,inhibitor,PTGS2
+Resveratrol,inhibitor,ACTH
+Resveratrol,,TNFSF13B
+Resveratrol,,epinephrine
+Resveratrol,,ACTH
+Niflumic Acid,inhibitor,PTGS2
+Nimesulide,inhibitor,PTGS2
+Nimesulide,,cortisol
+Lornoxicam,inhibitor,PTGS2
+Aceclofenac,inhibitor,PTGS2
+Nepafenac,inhibitor,PTGS2
+Parecoxib,inhibitor,PTGS2
+Parecoxib,,cortisol
+Pomalidomide,inhibitor,PTGS2
+Pomalidomide,inhibitor,TNF
+Dexibuprofen,inhibitor,PTGS2
+Dexibuprofen,modulator,AVP
+Alclofenac,antagonist,PTGS2
+Cysteamine,binder,SST
+Hyaluronidase,inhibitor,TGFB1
+Hyaluronidase (Human Recombinant),inhibitor,TGFB1
+Etanercept,antibody,TNF
+Etanercept,,TNF
+Etanercept,,TNF
+Adalimumab,antibody,TNF
+Infliximab,inhibitor,TNF
+Chloroquine,,TNF
+Epinephrine,antagonist,TNF
+Pseudoephedrine,inhibitor,dopamine
+Pseudoephedrine,,TNF
+Pseudoephedrine,inhibitor,cortisol
+Pseudoephedrine,,IL2
+Thalidomide,antagonist,PTGS2
+Thalidomide,inhibitor,TNF
+Thalidomide,intercalation,FST
+Glucosamine,,TNF
+Glucosamine,,IFNG
+Clenbuterol,other/unknown,TNF
+Pranlukast,other/unknown,TNF
+Pranlukast,antagonist,TRH
+Amrinone,inhibitor,TNF
+Isopropyl Alcohol,,TNF
+Isopropyl Alcohol,,dopamine
+Apremilast,,epinephrine
+Apremilast,,TNF
+Apremilast,,IFNG
+Apremilast,,IL2
+Golimumab,antibody,TNF
+Certolizumab pegol,neutralizer,TNF
+Pomalidomide,inhibitor,PTGS2
+Pomalidomide,inhibitor,TNF
+Citric Acid,,ACTH
+Citric Acid,,TNFSF13B
+Citric Acid,,epinephrine
+Citric Acid,,dopamine
+Citric Acid,,IL10
+Citric Acid,,ACTH
+Citric Acid,,IgG
+Citric Acid,,GNRH1
+Citric Acid,,epinephrine
+Belimumab,neutralizer,TNFSF13B
+Pranlukast,other/unknown,TNF
+Pranlukast,antagonist,TRH
+Mepolizumab,antagonist,TRH
+Protirelin,ligand,TRH
+Thyrotropin Alfa,agonist,TRH

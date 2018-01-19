@@ -5,6 +5,7 @@ as well as exporting networks to other consumers
 
 import re
 import pandas as pd
+import math
 
 
 def ps_read_csv(filename, ps_format=True):
@@ -165,13 +166,92 @@ def __ps_find_subject(s):
     return matchobj.group(0)
 
 
+def ps_perceptronify(in_network, max_indegree=8):
+    """
+    Function to create a perceptron network based on input network from pathway studio. Splits nodes with high
+    in-degrees into a sub network of nodes that feed into a perceptron node, thus limiting the number of
+    edges coming into any single node.
+
+    :param in_network: File Location of network to perceptronify
+    :param max_indegree: Max number of edges node can have coming in.
+    :return: Network that has been perceptronified.
+    """
+    rawnetwork = pd.read_csv(in_network, error_bad_lines=False)
+
+    network = pd.DataFrame(columns=list(rawnetwork.columns))
+    network['Source'] = rawnetwork['Source']
+    network['Target'] = rawnetwork['Target']
+    network['Polarity'] = rawnetwork['Polarity']
+
+    if 'Data' in list(network.columns):
+        network['Data'] = rawnetwork['Data']
+
+    g = network.groupby('Target')
+    network = g.apply(lambda grp: __splitgroup(grp.reset_index(), 6))
+
+    network.reset_index(drop=True)
+    network.sort_values(by=['Target'], inplace=True)
+    network.reset_index(inplace=True, drop=True)
+
+    perceptron_base = network.Target.apply(__find_base_target)
+    perceptron_base = list(set([item[0] for item in perceptron_base if item]))
+
+    temp = network.loc[network.Source.apply(lambda x: x in perceptron_base)]['Source'].apply(__renamesource)
+    network.loc[temp.index, 'Source'] = temp.values
+
+    if network['Data']:
+        network = network[['Source', 'Target', 'Polarity', 'Data']]
+    else:
+        network = network[['Source', 'Target', 'Polarity']]
+
+    return network
+
+
+def __find_base_target(target):  # RENAME
+    return re.findall('.*(?=__Perceptron)', target)
+
+
+def __renamesource(x):
+    x = x + '__Perceptron'
+    return x
+
+
+def __splitgroup(grp, inmax):
+    '''
+    Internal helper for perceptronify
+    :param grp:
+    :param inmax:
+    :return:
+    '''
+    name = grp['Target'].iloc[0]
+    cols = ['Source', 'Target', 'Polarity']
+    lst = []
+
+    if len(grp) > inmax:
+        numperceptrons = math.ceil(len(grp) / inmax)
+        cnt = 1
+        for num in range(len(grp)):
+            rename = name + '__' + str(cnt)
+            grp['Target'].iloc[num] = rename
+            if cnt == numperceptrons:
+                cnt = 1
+            else:
+                cnt = cnt + 1
+        for num in range(numperceptrons):
+            # lst.append([name+'__'+str(num+1),(name+'__Perceptron'),'NaN','NaN'])
+            lst.append([name + '__' + str(num + 1), (name + '__Perceptron'), 'NaN'])
+    perceptron = pd.DataFrame(lst, columns=cols)
+    df = grp.append(perceptron)
+    return df
+
+
 def ps_write_csv(network, csv_name='network_please_rename.csv', exclude_unknown=False):
     """
     Write network, formatted to CSV
 
     :param network: network to be written to csv.
     :param csv_name: Name for new file, defaulted 'network_please_rename.csv'
-    :param exlude_unknown: flag to exclude rows where Polarity is unknown
+    :param exclude_unknown: flag to exclude rows where Polarity is unknown
     :return: none
     """
     network.to_csv(csv_name, encoding="UTF-16")

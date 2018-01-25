@@ -50,6 +50,9 @@ coverage.xml
 *.cover
 .hypothesis/
 
+# CSV files
+*.csv
+
 # Translations
 *.mo
 *.pot

@@ -1,0 +1,102 @@
+.TH "DataTools.DB_datatools" 3 "Thu Jan 25 2018" "Data Tools Package" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DataTools.DB_datatools
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBdb_connect\fP (dbfile)"
+.br
+.ti -1c
+.RI "def \fBdb_findrelations\fP (cursor, search_terms)"
+.br
+.ti -1c
+.RI "def \fBdb_findtarget_bysynonym\fP ()"
+.br
+.ti -1c
+.RI "def \fBdb_finddrug_bysynonym\fP ()"
+.br
+.ti -1c
+.RI "def \fBdb_addsynonymbylist\fP ()"
+.br
+.ti -1c
+.RI "def \fBdb_findtargetsynonyms\fP (curs, target)"
+.br
+.ti -1c
+.RI "def \fBcloseconnections\fP (conn, curs)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+Module to interact with SQLite DB for CSB Lab tools
+
+.fi
+.PP
+ 
+.SH "Function Documentation"
+.PP 
+.SS "def DataTools\&.DB_datatools\&.closeconnections ( conn,  curs)"
+
+.PP
+.nf
+Closes DB cursor and connection
+:param conn:
+:param curs:
+:return:
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.DB_datatools\&.db_addsynonymbylist ()"
+
+.SS "def DataTools\&.DB_datatools\&.db_connect ( dbfile)"
+
+.PP
+.nf
+connect to DB and return cursor and db connection.
+:param dbfile:
+:return: Database Cursor, Connection
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.DB_datatools\&.db_finddrug_bysynonym ()"
+
+.SS "def DataTools\&.DB_datatools\&.db_findrelations ( cursor,  search_terms)"
+
+.PP
+.nf
+Find all the Drug Target relations, as well as off Target drug relations of
+relevant drugs
+:param cursor:
+:param search_terms:
+:return: List of drug relations
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.DB_datatools\&.db_findtarget_bysynonym ()"
+
+.SS "def DataTools\&.DB_datatools\&.db_findtargetsynonyms ( curs,  target)"
+
+.PP
+.nf
+Finds all the synonyms of a given target.
+:param curs: Cursor
+:param target: Target to be searched
+:return: List of all the target's synonyms
+
+.fi
+.PP
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Data Tools Package from the source code\&.

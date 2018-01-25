@@ -1,0 +1,90 @@
+.TH "DataTools.language_datatools.DictionaryTagger" 3 "Thu Jan 25 2018" "Data Tools Package" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DataTools.language_datatools.DictionaryTagger
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits object\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self, dictionary_paths)"
+.br
+.ti -1c
+.RI "def \fBtag\fP (self, postagged_sentences)"
+.br
+.ti -1c
+.RI "def \fBtag_sentence\fP (self, sentence, tag_with_lemmas=False)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBdictionary\fP"
+.br
+.ti -1c
+.RI "\fBmax_key_size\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+    Class to tag sentences
+
+.fi
+.PP
+ 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def DataTools\&.language_datatools\&.DictionaryTagger\&.__init__ ( self,  dictionary_paths)"
+
+.PP
+.nf
+    Opens YAML files and instantiates object of type DictionaryTagger
+:param dictionary_paths:
+
+.fi
+.PP
+ 
+.SH "Member Function Documentation"
+.PP 
+.SS "def DataTools\&.language_datatools\&.DictionaryTagger\&.tag ( self,  postagged_sentences)"
+
+.PP
+.nf
+    Tags sentences with internal tags for positive and negative
+:param postagged_sentences:
+:return: tagged sentences
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.language_datatools\&.DictionaryTagger\&.tag_sentence ( self,  sentence,  tag_with_lemmas = \fCFalse\fP)"
+
+.PP
+.nf
+the result is only one tagging of all the possible ones.
+The resulting tagging is determined by these two priority rules:
+    - longest matches have higher priority
+    - search is made from left to right
+
+.fi
+.PP
+ 
+.SH "Member Data Documentation"
+.PP 
+.SS "DataTools\&.language_datatools\&.DictionaryTagger\&.dictionary"
+
+.SS "DataTools\&.language_datatools\&.DictionaryTagger\&.max_key_size"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Data Tools Package from the source code\&.

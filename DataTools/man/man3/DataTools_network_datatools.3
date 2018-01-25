@@ -1,0 +1,51 @@
+.TH "DataTools.network_datatools" 3 "Thu Jan 25 2018" "Data Tools Package" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DataTools.network_datatools
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBfindnetworknodes\fP (network)"
+.br
+.ti -1c
+.RI "def \fBfindaliases\fP (entitylist)"
+.br
+.ti -1c
+.RI "def \fBperceptronify\fP (network, indegree_max=8)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "def DataTools\&.network_datatools\&.findaliases ( entitylist)"
+
+.PP
+.nf
+    Take in a dataframe that has nodes and their aliases, return a list that joins the Aliases
+:param entitylist:
+:return: List of [Name, Alias]
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.network_datatools\&.findnetworknodes ( network)"
+
+.PP
+.nf
+Take a network with columns 'Source' and 'Target',
+Return unique nodes in said network
+:param network:
+:return: list of unique nodes
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.network_datatools\&.perceptronify ( network,  indegree_max = \fC8\fP)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Data Tools Package from the source code\&.

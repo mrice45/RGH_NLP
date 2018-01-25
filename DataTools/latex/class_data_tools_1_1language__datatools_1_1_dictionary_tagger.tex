@@ -1,0 +1,115 @@
+\hypertarget{class_data_tools_1_1language__datatools_1_1_dictionary_tagger}{}\section{Data\+Tools.\+language\+\_\+datatools.\+Dictionary\+Tagger Class Reference}
+\label{class_data_tools_1_1language__datatools_1_1_dictionary_tagger}\index{Data\+Tools.\+language\+\_\+datatools.\+Dictionary\+Tagger@{Data\+Tools.\+language\+\_\+datatools.\+Dictionary\+Tagger}}
+
+
+Inheritance diagram for Data\+Tools.\+language\+\_\+datatools.\+Dictionary\+Tagger\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{class_data_tools_1_1language__datatools_1_1_dictionary_tagger__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Data\+Tools.\+language\+\_\+datatools.\+Dictionary\+Tagger\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{class_data_tools_1_1language__datatools_1_1_dictionary_tagger__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_data_tools_1_1language__datatools_1_1_dictionary_tagger_aae9f9cb588573d5f877d251f23b515f0}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, dictionary\+\_\+paths)
+\item 
+def \mbox{\hyperlink{class_data_tools_1_1language__datatools_1_1_dictionary_tagger_aa15c0e987509a72cb7ecc9c0a5ff39d7}{tag}} (self, postagged\+\_\+sentences)
+\item 
+def \mbox{\hyperlink{class_data_tools_1_1language__datatools_1_1_dictionary_tagger_ac5656960ce6b5a95d59cbc3df1b2332b}{tag\+\_\+sentence}} (self, sentence, tag\+\_\+with\+\_\+lemmas=False)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_data_tools_1_1language__datatools_1_1_dictionary_tagger_a0e92e742ab9322b06e49ce94a2008d3f}{dictionary}}
+\item 
+\mbox{\hyperlink{class_data_tools_1_1language__datatools_1_1_dictionary_tagger_ab3da30a484af2afac14caa6cfb31729d}{max\+\_\+key\+\_\+size}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}    Class to tag sentences
+\end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_data_tools_1_1language__datatools_1_1_dictionary_tagger_aae9f9cb588573d5f877d251f23b515f0}\label{class_data_tools_1_1language__datatools_1_1_dictionary_tagger_aae9f9cb588573d5f877d251f23b515f0}} 
+\index{Data\+Tools\+::language\+\_\+datatools\+::\+Dictionary\+Tagger@{Data\+Tools\+::language\+\_\+datatools\+::\+Dictionary\+Tagger}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Data\+Tools\+::language\+\_\+datatools\+::\+Dictionary\+Tagger@{Data\+Tools\+::language\+\_\+datatools\+::\+Dictionary\+Tagger}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Data\+Tools.\+language\+\_\+datatools.\+Dictionary\+Tagger.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dictionary\+\_\+paths }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Opens YAML files and instantiates object of type DictionaryTagger
+:param dictionary_paths:
+\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_data_tools_1_1language__datatools_1_1_dictionary_tagger_aa15c0e987509a72cb7ecc9c0a5ff39d7}\label{class_data_tools_1_1language__datatools_1_1_dictionary_tagger_aa15c0e987509a72cb7ecc9c0a5ff39d7}} 
+\index{Data\+Tools\+::language\+\_\+datatools\+::\+Dictionary\+Tagger@{Data\+Tools\+::language\+\_\+datatools\+::\+Dictionary\+Tagger}!tag@{tag}}
+\index{tag@{tag}!Data\+Tools\+::language\+\_\+datatools\+::\+Dictionary\+Tagger@{Data\+Tools\+::language\+\_\+datatools\+::\+Dictionary\+Tagger}}
+\subsubsection{\texorpdfstring{tag()}{tag()}}
+{\footnotesize\ttfamily def Data\+Tools.\+language\+\_\+datatools.\+Dictionary\+Tagger.\+tag (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{postagged\+\_\+sentences }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Tags sentences with internal tags for positive and negative
+:param postagged_sentences:
+:return: tagged sentences
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_tools_1_1language__datatools_1_1_dictionary_tagger_aa15c0e987509a72cb7ecc9c0a5ff39d7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_tools_1_1language__datatools_1_1_dictionary_tagger_ac5656960ce6b5a95d59cbc3df1b2332b}\label{class_data_tools_1_1language__datatools_1_1_dictionary_tagger_ac5656960ce6b5a95d59cbc3df1b2332b}} 
+\index{Data\+Tools\+::language\+\_\+datatools\+::\+Dictionary\+Tagger@{Data\+Tools\+::language\+\_\+datatools\+::\+Dictionary\+Tagger}!tag\+\_\+sentence@{tag\+\_\+sentence}}
+\index{tag\+\_\+sentence@{tag\+\_\+sentence}!Data\+Tools\+::language\+\_\+datatools\+::\+Dictionary\+Tagger@{Data\+Tools\+::language\+\_\+datatools\+::\+Dictionary\+Tagger}}
+\subsubsection{\texorpdfstring{tag\+\_\+sentence()}{tag\_sentence()}}
+{\footnotesize\ttfamily def Data\+Tools.\+language\+\_\+datatools.\+Dictionary\+Tagger.\+tag\+\_\+sentence (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sentence,  }\item[{}]{tag\+\_\+with\+\_\+lemmas = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}the result is only one tagging of all the possible ones.
+The resulting tagging is determined by these two priority rules:
+    - longest matches have higher priority
+    - search is made from left to right
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_tools_1_1language__datatools_1_1_dictionary_tagger_ac5656960ce6b5a95d59cbc3df1b2332b_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_data_tools_1_1language__datatools_1_1_dictionary_tagger_a0e92e742ab9322b06e49ce94a2008d3f}\label{class_data_tools_1_1language__datatools_1_1_dictionary_tagger_a0e92e742ab9322b06e49ce94a2008d3f}} 
+\index{Data\+Tools\+::language\+\_\+datatools\+::\+Dictionary\+Tagger@{Data\+Tools\+::language\+\_\+datatools\+::\+Dictionary\+Tagger}!dictionary@{dictionary}}
+\index{dictionary@{dictionary}!Data\+Tools\+::language\+\_\+datatools\+::\+Dictionary\+Tagger@{Data\+Tools\+::language\+\_\+datatools\+::\+Dictionary\+Tagger}}
+\subsubsection{\texorpdfstring{dictionary}{dictionary}}
+{\footnotesize\ttfamily Data\+Tools.\+language\+\_\+datatools.\+Dictionary\+Tagger.\+dictionary}
+
+\mbox{\Hypertarget{class_data_tools_1_1language__datatools_1_1_dictionary_tagger_ab3da30a484af2afac14caa6cfb31729d}\label{class_data_tools_1_1language__datatools_1_1_dictionary_tagger_ab3da30a484af2afac14caa6cfb31729d}} 
+\index{Data\+Tools\+::language\+\_\+datatools\+::\+Dictionary\+Tagger@{Data\+Tools\+::language\+\_\+datatools\+::\+Dictionary\+Tagger}!max\+\_\+key\+\_\+size@{max\+\_\+key\+\_\+size}}
+\index{max\+\_\+key\+\_\+size@{max\+\_\+key\+\_\+size}!Data\+Tools\+::language\+\_\+datatools\+::\+Dictionary\+Tagger@{Data\+Tools\+::language\+\_\+datatools\+::\+Dictionary\+Tagger}}
+\subsubsection{\texorpdfstring{max\+\_\+key\+\_\+size}{max\_key\_size}}
+{\footnotesize\ttfamily Data\+Tools.\+language\+\_\+datatools.\+Dictionary\+Tagger.\+max\+\_\+key\+\_\+size}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{language__datatools_8py}{language\+\_\+datatools.\+py}}\end{DoxyCompactItemize}

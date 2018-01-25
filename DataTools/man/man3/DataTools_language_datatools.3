@@ -1,0 +1,131 @@
+.TH "DataTools.language_datatools" 3 "Thu Jan 25 2018" "Data Tools Package" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DataTools.language_datatools
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBDictionaryTagger\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBsplit\fP (text)"
+.br
+.ti -1c
+.RI "def \fBpos_tag\fP (sentences)"
+.br
+.ti -1c
+.RI "def \fBnetwork_score\fP (network, add_polarity=True, flag_changes=True)"
+.br
+.ti -1c
+.RI "def \fBsentence_score\fP (sentence_tokens, previous_token, acum_score)"
+.br
+.ti -1c
+.RI "def \fBsentiment_score\fP (review)"
+.br
+.ti -1c
+.RI "def \fBweighted_sentence_score\fP (sentence_tokens)"
+.br
+.ti -1c
+.RI "def \fBweighted_sentiment_score\fP (review, matrix_flag)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "def DataTools\&.language_datatools\&.network_score ( network,  add_polarity = \fCTrue\fP,  flag_changes = \fCTrue\fP)"
+
+.PP
+.nf
+Runs Sentiment analysis on a network and returns an analyzed and scored network.
+:param network:
+:param add_polarity:
+:param flag_changes:
+:return: scored network
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.language_datatools\&.pos_tag ( sentences)"
+
+.PP
+.nf
+input format: list of lists of words
+    e.g.: [['this', 'is', 'a', 'sentence'], ['this', 'is', 'another', 'one']]
+output format: list of lists of tagged tokens. Each tagged tokens has a
+form, a lemma, and a list of tags
+    e.g: [[('this', 'this', ['DT']), ('is', 'be', ['VB']), ('a', 'a', ['DT']), ('sentence', 'sentence', ['NN'])],
+            [('this', 'this', ['DT']), ('is', 'be', ['VB']), ('another', 'another', ['DT']),
+            ('one', 'one', ['CARD'])]]
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.language_datatools\&.sentence_score ( sentence_tokens,  previous_token,  acum_score)"
+
+.PP
+.nf
+    scores sentences thats been tagged.
+:param sentence_tokens:
+:param previous_token:
+:param acum_score:
+:return:
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.language_datatools\&.sentiment_score ( review)"
+
+.PP
+.nf
+Returns cumulative score of scored sentences
+:param review:
+:return:
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.language_datatools\&.split ( text)"
+
+.PP
+.nf
+input format: a paragraph of text
+output format: a list of lists of words.
+    e.g.: [['this', 'is', 'a', 'sentence'], ['this', 'is', 'another', 'one']]
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.language_datatools\&.weighted_sentence_score ( sentence_tokens)"
+
+.PP
+.nf
+Weighted score...
+:param sentence_tokens:
+:return: Totally arbitrary weight based on hokey pokey
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.language_datatools\&.weighted_sentiment_score ( review,  matrix_flag)"
+
+.PP
+.nf
+    Totally arbitrary weight based on hokey pokey
+:param review:
+:param matrix_flag:
+:return: Totally arbitrary weight based on hokey pokey
+
+.fi
+.PP
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Data Tools Package from the source code\&.

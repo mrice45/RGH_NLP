@@ -2,6 +2,7 @@
 Module to interact with SQLite DB for CSB Lab tools
 """
 import sqlite3 as sql
+import json
 
 
 def db_connect(dbfile):
@@ -111,4 +112,5 @@ def closeconnections(conn, curs):
 
     curs.close()
     conn.close()
+
 

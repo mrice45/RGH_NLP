@@ -1,0 +1,223 @@
+\hypertarget{namespace_data_tools_1_1ps__datatools}{}\section{Data\+Tools.\+ps\+\_\+datatools Namespace Reference}
+\label{namespace_data_tools_1_1ps__datatools}\index{Data\+Tools.\+ps\+\_\+datatools@{Data\+Tools.\+ps\+\_\+datatools}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespace_data_tools_1_1ps__datatools_abadfbf72a9e40c0db140a1d52a04b2ad}{ps\+\_\+read\+\_\+csv}} (filename, ps\+\_\+format=True)
+\item 
+def \mbox{\hyperlink{namespace_data_tools_1_1ps__datatools_ab46896b61f3a03e9f6c6ff5ab9a1dffe}{ps\+\_\+read\+\_\+entitylist}} (filename)
+\item 
+def \mbox{\hyperlink{namespace_data_tools_1_1ps__datatools_a576d7bf488a40d757591fb7d2bf8a450}{ps\+\_\+has\+\_\+duplicates}} (network)
+\item 
+def \mbox{\hyperlink{namespace_data_tools_1_1ps__datatools_a06812dafe5446a3f89e990075e28ed9c}{ps\+\_\+return\+\_\+duplicates}} (network)
+\item 
+def \mbox{\hyperlink{namespace_data_tools_1_1ps__datatools_af2b808b4e4c01897013a7931711dfc1e}{ps\+\_\+flag\+\_\+duplicates}} (network)
+\item 
+def \mbox{\hyperlink{namespace_data_tools_1_1ps__datatools_aa87f89a53b8e244f6a35933c96d7df47}{ps\+\_\+drop\+\_\+duplicates}} (network)
+\item 
+def \mbox{\hyperlink{namespace_data_tools_1_1ps__datatools_afefc36ca9e31fd7b3e2fc2126f9414bd}{ps\+\_\+clean\+\_\+ref}} (network)
+\item 
+def \mbox{\hyperlink{namespace_data_tools_1_1ps__datatools_a9e2bdb845162499b6c7ef07092fa76e0}{ps\+\_\+clean\+\_\+sentence\+\_\+tags}} (s)
+\item 
+def \mbox{\hyperlink{namespace_data_tools_1_1ps__datatools_aa1f7c645ca04ccce524923614553e377}{ps\+\_\+clear\+\_\+end}} (s)
+\item 
+def \mbox{\hyperlink{namespace_data_tools_1_1ps__datatools_ac647fc63ad23a9826a3546ddb243aafc}{ps\+\_\+replace\+\_\+syntax}} (s)
+\item 
+def \mbox{\hyperlink{namespace_data_tools_1_1ps__datatools_a9df7c7cd4b349ceeefe4e9cdcc11b181}{ps\+\_\+perceptronify}} (in\+\_\+network, max\+\_\+indegree=8)
+\item 
+def \mbox{\hyperlink{namespace_data_tools_1_1ps__datatools_a5af601118f566110be97342fef324966}{ps\+\_\+write\+\_\+csv}} (network, csv\+\_\+name=\textquotesingle{}network\+\_\+please\+\_\+rename.\+csv\textquotesingle{}, exclude\+\_\+unknown=False)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}This Module is for use in importing networks from Pathway Studio,
+as well as exporting networks to other consumers
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespace_data_tools_1_1ps__datatools_afefc36ca9e31fd7b3e2fc2126f9414bd}\label{namespace_data_tools_1_1ps__datatools_afefc36ca9e31fd7b3e2fc2126f9414bd}} 
+\index{Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}!ps\+\_\+clean\+\_\+ref@{ps\+\_\+clean\+\_\+ref}}
+\index{ps\+\_\+clean\+\_\+ref@{ps\+\_\+clean\+\_\+ref}!Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}}
+\subsubsection{\texorpdfstring{ps\+\_\+clean\+\_\+ref()}{ps\_clean\_ref()}}
+{\footnotesize\ttfamily def Data\+Tools.\+ps\+\_\+datatools.\+ps\+\_\+clean\+\_\+ref (\begin{DoxyParamCaption}\item[{}]{network }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Take in network, clean ALL references column of PS tags
+:param network: network to have references cleaned from
+:return: Network, with new Clean_References column.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_data_tools_1_1ps__datatools_afefc36ca9e31fd7b3e2fc2126f9414bd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_data_tools_1_1ps__datatools_afefc36ca9e31fd7b3e2fc2126f9414bd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_data_tools_1_1ps__datatools_a9e2bdb845162499b6c7ef07092fa76e0}\label{namespace_data_tools_1_1ps__datatools_a9e2bdb845162499b6c7ef07092fa76e0}} 
+\index{Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}!ps\+\_\+clean\+\_\+sentence\+\_\+tags@{ps\+\_\+clean\+\_\+sentence\+\_\+tags}}
+\index{ps\+\_\+clean\+\_\+sentence\+\_\+tags@{ps\+\_\+clean\+\_\+sentence\+\_\+tags}!Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}}
+\subsubsection{\texorpdfstring{ps\+\_\+clean\+\_\+sentence\+\_\+tags()}{ps\_clean\_sentence\_tags()}}
+{\footnotesize\ttfamily def Data\+Tools.\+ps\+\_\+datatools.\+ps\+\_\+clean\+\_\+sentence\+\_\+tags (\begin{DoxyParamCaption}\item[{}]{s }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Removes PS tags from SINGLE reference.
+:param s:
+:return:
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_data_tools_1_1ps__datatools_a9e2bdb845162499b6c7ef07092fa76e0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_data_tools_1_1ps__datatools_a9e2bdb845162499b6c7ef07092fa76e0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_data_tools_1_1ps__datatools_aa1f7c645ca04ccce524923614553e377}\label{namespace_data_tools_1_1ps__datatools_aa1f7c645ca04ccce524923614553e377}} 
+\index{Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}!ps\+\_\+clear\+\_\+end@{ps\+\_\+clear\+\_\+end}}
+\index{ps\+\_\+clear\+\_\+end@{ps\+\_\+clear\+\_\+end}!Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}}
+\subsubsection{\texorpdfstring{ps\+\_\+clear\+\_\+end()}{ps\_clear\_end()}}
+{\footnotesize\ttfamily def Data\+Tools.\+ps\+\_\+datatools.\+ps\+\_\+clear\+\_\+end (\begin{DoxyParamCaption}\item[{}]{s }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Removes trailing whitespace from PS sentences.
+:param s:
+:return:
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_data_tools_1_1ps__datatools_aa1f7c645ca04ccce524923614553e377_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_data_tools_1_1ps__datatools_aa87f89a53b8e244f6a35933c96d7df47}\label{namespace_data_tools_1_1ps__datatools_aa87f89a53b8e244f6a35933c96d7df47}} 
+\index{Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}!ps\+\_\+drop\+\_\+duplicates@{ps\+\_\+drop\+\_\+duplicates}}
+\index{ps\+\_\+drop\+\_\+duplicates@{ps\+\_\+drop\+\_\+duplicates}!Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}}
+\subsubsection{\texorpdfstring{ps\+\_\+drop\+\_\+duplicates()}{ps\_drop\_duplicates()}}
+{\footnotesize\ttfamily def Data\+Tools.\+ps\+\_\+datatools.\+ps\+\_\+drop\+\_\+duplicates (\begin{DoxyParamCaption}\item[{}]{network }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Drops Duplicates from network
+:param network:
+:return: network df minus the duplicates
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_data_tools_1_1ps__datatools_af2b808b4e4c01897013a7931711dfc1e}\label{namespace_data_tools_1_1ps__datatools_af2b808b4e4c01897013a7931711dfc1e}} 
+\index{Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}!ps\+\_\+flag\+\_\+duplicates@{ps\+\_\+flag\+\_\+duplicates}}
+\index{ps\+\_\+flag\+\_\+duplicates@{ps\+\_\+flag\+\_\+duplicates}!Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}}
+\subsubsection{\texorpdfstring{ps\+\_\+flag\+\_\+duplicates()}{ps\_flag\_duplicates()}}
+{\footnotesize\ttfamily def Data\+Tools.\+ps\+\_\+datatools.\+ps\+\_\+flag\+\_\+duplicates (\begin{DoxyParamCaption}\item[{}]{network }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Changes Duplicated bool to True if duplicated.
+:param network:
+:return:
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_data_tools_1_1ps__datatools_a576d7bf488a40d757591fb7d2bf8a450}\label{namespace_data_tools_1_1ps__datatools_a576d7bf488a40d757591fb7d2bf8a450}} 
+\index{Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}!ps\+\_\+has\+\_\+duplicates@{ps\+\_\+has\+\_\+duplicates}}
+\index{ps\+\_\+has\+\_\+duplicates@{ps\+\_\+has\+\_\+duplicates}!Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}}
+\subsubsection{\texorpdfstring{ps\+\_\+has\+\_\+duplicates()}{ps\_has\_duplicates()}}
+{\footnotesize\ttfamily def Data\+Tools.\+ps\+\_\+datatools.\+ps\+\_\+has\+\_\+duplicates (\begin{DoxyParamCaption}\item[{}]{network }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Boolean check to see if there are duplicated rows
+:param network:
+:return:
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_data_tools_1_1ps__datatools_a9df7c7cd4b349ceeefe4e9cdcc11b181}\label{namespace_data_tools_1_1ps__datatools_a9df7c7cd4b349ceeefe4e9cdcc11b181}} 
+\index{Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}!ps\+\_\+perceptronify@{ps\+\_\+perceptronify}}
+\index{ps\+\_\+perceptronify@{ps\+\_\+perceptronify}!Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}}
+\subsubsection{\texorpdfstring{ps\+\_\+perceptronify()}{ps\_perceptronify()}}
+{\footnotesize\ttfamily def Data\+Tools.\+ps\+\_\+datatools.\+ps\+\_\+perceptronify (\begin{DoxyParamCaption}\item[{}]{in\+\_\+network,  }\item[{}]{max\+\_\+indegree = {\ttfamily 8} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function to create a perceptron network based on input network from pathway studio. Splits nodes with high
+in-degrees into a sub network of nodes that feed into a perceptron node, thus limiting the number of
+edges coming into any single node.
+
+:param in_network: File Location of network to perceptronify
+:param max_indegree: Max number of edges node can have coming in.
+:return: Network that has been perceptronified.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_data_tools_1_1ps__datatools_abadfbf72a9e40c0db140a1d52a04b2ad}\label{namespace_data_tools_1_1ps__datatools_abadfbf72a9e40c0db140a1d52a04b2ad}} 
+\index{Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}!ps\+\_\+read\+\_\+csv@{ps\+\_\+read\+\_\+csv}}
+\index{ps\+\_\+read\+\_\+csv@{ps\+\_\+read\+\_\+csv}!Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}}
+\subsubsection{\texorpdfstring{ps\+\_\+read\+\_\+csv()}{ps\_read\_csv()}}
+{\footnotesize\ttfamily def Data\+Tools.\+ps\+\_\+datatools.\+ps\+\_\+read\+\_\+csv (\begin{DoxyParamCaption}\item[{}]{filename,  }\item[{}]{ps\+\_\+format = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Read CSV from Pathway Studio, with or without initial data clean
+:param filename: File to be read
+:param ps_format: Boolean to format PS raw to cleaned
+:return: Raw pandas DataFrame, or cleaned pandas DF
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_data_tools_1_1ps__datatools_abadfbf72a9e40c0db140a1d52a04b2ad_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_data_tools_1_1ps__datatools_ab46896b61f3a03e9f6c6ff5ab9a1dffe}\label{namespace_data_tools_1_1ps__datatools_ab46896b61f3a03e9f6c6ff5ab9a1dffe}} 
+\index{Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}!ps\+\_\+read\+\_\+entitylist@{ps\+\_\+read\+\_\+entitylist}}
+\index{ps\+\_\+read\+\_\+entitylist@{ps\+\_\+read\+\_\+entitylist}!Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}}
+\subsubsection{\texorpdfstring{ps\+\_\+read\+\_\+entitylist()}{ps\_read\_entitylist()}}
+{\footnotesize\ttfamily def Data\+Tools.\+ps\+\_\+datatools.\+ps\+\_\+read\+\_\+entitylist (\begin{DoxyParamCaption}\item[{}]{filename }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Read the Pathway Studio Entity List file export
+:param filename: path/to/file
+:return: pandas DataFrame of Name and Alias
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_data_tools_1_1ps__datatools_ac647fc63ad23a9826a3546ddb243aafc}\label{namespace_data_tools_1_1ps__datatools_ac647fc63ad23a9826a3546ddb243aafc}} 
+\index{Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}!ps\+\_\+replace\+\_\+syntax@{ps\+\_\+replace\+\_\+syntax}}
+\index{ps\+\_\+replace\+\_\+syntax@{ps\+\_\+replace\+\_\+syntax}!Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}}
+\subsubsection{\texorpdfstring{ps\+\_\+replace\+\_\+syntax()}{ps\_replace\_syntax()}}
+{\footnotesize\ttfamily def Data\+Tools.\+ps\+\_\+datatools.\+ps\+\_\+replace\+\_\+syntax (\begin{DoxyParamCaption}\item[{}]{s }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Takes in sentence s and removes PS internal formatting
+:param s: Sentence to be formatted
+:return: cleaned sentence.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_data_tools_1_1ps__datatools_ac647fc63ad23a9826a3546ddb243aafc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_data_tools_1_1ps__datatools_a06812dafe5446a3f89e990075e28ed9c}\label{namespace_data_tools_1_1ps__datatools_a06812dafe5446a3f89e990075e28ed9c}} 
+\index{Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}!ps\+\_\+return\+\_\+duplicates@{ps\+\_\+return\+\_\+duplicates}}
+\index{ps\+\_\+return\+\_\+duplicates@{ps\+\_\+return\+\_\+duplicates}!Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}}
+\subsubsection{\texorpdfstring{ps\+\_\+return\+\_\+duplicates()}{ps\_return\_duplicates()}}
+{\footnotesize\ttfamily def Data\+Tools.\+ps\+\_\+datatools.\+ps\+\_\+return\+\_\+duplicates (\begin{DoxyParamCaption}\item[{}]{network }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns duplicated rows in DF
+:param network:
+:return:
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_data_tools_1_1ps__datatools_a5af601118f566110be97342fef324966}\label{namespace_data_tools_1_1ps__datatools_a5af601118f566110be97342fef324966}} 
+\index{Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}!ps\+\_\+write\+\_\+csv@{ps\+\_\+write\+\_\+csv}}
+\index{ps\+\_\+write\+\_\+csv@{ps\+\_\+write\+\_\+csv}!Data\+Tools\+::ps\+\_\+datatools@{Data\+Tools\+::ps\+\_\+datatools}}
+\subsubsection{\texorpdfstring{ps\+\_\+write\+\_\+csv()}{ps\_write\_csv()}}
+{\footnotesize\ttfamily def Data\+Tools.\+ps\+\_\+datatools.\+ps\+\_\+write\+\_\+csv (\begin{DoxyParamCaption}\item[{}]{network,  }\item[{}]{csv\+\_\+name = {\ttfamily \textquotesingle{}network\+\_\+please\+\_\+rename.csv\textquotesingle{}},  }\item[{}]{exclude\+\_\+unknown = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Write network, formatted to CSV
+
+:param network: network to be written to csv.
+:param csv_name: Name for new file, defaulted 'network_please_rename.csv'
+:param exclude_unknown: flag to exclude rows where Polarity is unknown
+:return: none
+\end{DoxyVerb}
+ 

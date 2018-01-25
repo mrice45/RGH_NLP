@@ -1,0 +1,90 @@
+\hypertarget{namespace_data_tools_1_1_d_b__datatools}{}\section{Data\+Tools.\+D\+B\+\_\+datatools Namespace Reference}
+\label{namespace_data_tools_1_1_d_b__datatools}\index{Data\+Tools.\+D\+B\+\_\+datatools@{Data\+Tools.\+D\+B\+\_\+datatools}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespace_data_tools_1_1_d_b__datatools_a439f619ddb9436e2d169bc1ffdd44f53}{db\+\_\+connect}} (dbfile)
+\item 
+def \mbox{\hyperlink{namespace_data_tools_1_1_d_b__datatools_a2a67b578f5ff9551e8dff60801003d03}{db\+\_\+findrelations}} (cursor, search\+\_\+terms)
+\item 
+def \mbox{\hyperlink{namespace_data_tools_1_1_d_b__datatools_a7037f72ba89fb8116266f6da2035ef5a}{db\+\_\+findtarget\+\_\+bysynonym}} ()
+\item 
+def \mbox{\hyperlink{namespace_data_tools_1_1_d_b__datatools_ac08628067d00d384a652ff7667824d8f}{db\+\_\+finddrug\+\_\+bysynonym}} ()
+\item 
+def \mbox{\hyperlink{namespace_data_tools_1_1_d_b__datatools_a1212712fcf953f4da8f4f9305eb4f1a7}{db\+\_\+addsynonymbylist}} ()
+\item 
+def \mbox{\hyperlink{namespace_data_tools_1_1_d_b__datatools_adace12ff97f1c03f8beac9f2c3853972}{db\+\_\+findtargetsynonyms}} (curs, target)
+\item 
+def \mbox{\hyperlink{namespace_data_tools_1_1_d_b__datatools_abd91ba3400217a142f9142503972316a}{closeconnections}} (conn, curs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Module to interact with SQLite DB for CSB Lab tools
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespace_data_tools_1_1_d_b__datatools_abd91ba3400217a142f9142503972316a}\label{namespace_data_tools_1_1_d_b__datatools_abd91ba3400217a142f9142503972316a}} 
+\index{Data\+Tools\+::\+D\+B\+\_\+datatools@{Data\+Tools\+::\+D\+B\+\_\+datatools}!closeconnections@{closeconnections}}
+\index{closeconnections@{closeconnections}!Data\+Tools\+::\+D\+B\+\_\+datatools@{Data\+Tools\+::\+D\+B\+\_\+datatools}}
+\subsubsection{\texorpdfstring{closeconnections()}{closeconnections()}}
+{\footnotesize\ttfamily def Data\+Tools.\+D\+B\+\_\+datatools.\+closeconnections (\begin{DoxyParamCaption}\item[{}]{conn,  }\item[{}]{curs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Closes DB cursor and connection
+:param conn:
+:param curs:
+:return:
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_data_tools_1_1_d_b__datatools_a1212712fcf953f4da8f4f9305eb4f1a7}\label{namespace_data_tools_1_1_d_b__datatools_a1212712fcf953f4da8f4f9305eb4f1a7}} 
+\index{Data\+Tools\+::\+D\+B\+\_\+datatools@{Data\+Tools\+::\+D\+B\+\_\+datatools}!db\+\_\+addsynonymbylist@{db\+\_\+addsynonymbylist}}
+\index{db\+\_\+addsynonymbylist@{db\+\_\+addsynonymbylist}!Data\+Tools\+::\+D\+B\+\_\+datatools@{Data\+Tools\+::\+D\+B\+\_\+datatools}}
+\subsubsection{\texorpdfstring{db\+\_\+addsynonymbylist()}{db\_addsynonymbylist()}}
+{\footnotesize\ttfamily def Data\+Tools.\+D\+B\+\_\+datatools.\+db\+\_\+addsynonymbylist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_data_tools_1_1_d_b__datatools_a439f619ddb9436e2d169bc1ffdd44f53}\label{namespace_data_tools_1_1_d_b__datatools_a439f619ddb9436e2d169bc1ffdd44f53}} 
+\index{Data\+Tools\+::\+D\+B\+\_\+datatools@{Data\+Tools\+::\+D\+B\+\_\+datatools}!db\+\_\+connect@{db\+\_\+connect}}
+\index{db\+\_\+connect@{db\+\_\+connect}!Data\+Tools\+::\+D\+B\+\_\+datatools@{Data\+Tools\+::\+D\+B\+\_\+datatools}}
+\subsubsection{\texorpdfstring{db\+\_\+connect()}{db\_connect()}}
+{\footnotesize\ttfamily def Data\+Tools.\+D\+B\+\_\+datatools.\+db\+\_\+connect (\begin{DoxyParamCaption}\item[{}]{dbfile }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}connect to DB and return cursor and db connection.
+:param dbfile:
+:return: Database Cursor, Connection
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_data_tools_1_1_d_b__datatools_ac08628067d00d384a652ff7667824d8f}\label{namespace_data_tools_1_1_d_b__datatools_ac08628067d00d384a652ff7667824d8f}} 
+\index{Data\+Tools\+::\+D\+B\+\_\+datatools@{Data\+Tools\+::\+D\+B\+\_\+datatools}!db\+\_\+finddrug\+\_\+bysynonym@{db\+\_\+finddrug\+\_\+bysynonym}}
+\index{db\+\_\+finddrug\+\_\+bysynonym@{db\+\_\+finddrug\+\_\+bysynonym}!Data\+Tools\+::\+D\+B\+\_\+datatools@{Data\+Tools\+::\+D\+B\+\_\+datatools}}
+\subsubsection{\texorpdfstring{db\+\_\+finddrug\+\_\+bysynonym()}{db\_finddrug\_bysynonym()}}
+{\footnotesize\ttfamily def Data\+Tools.\+D\+B\+\_\+datatools.\+db\+\_\+finddrug\+\_\+bysynonym (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_data_tools_1_1_d_b__datatools_a2a67b578f5ff9551e8dff60801003d03}\label{namespace_data_tools_1_1_d_b__datatools_a2a67b578f5ff9551e8dff60801003d03}} 
+\index{Data\+Tools\+::\+D\+B\+\_\+datatools@{Data\+Tools\+::\+D\+B\+\_\+datatools}!db\+\_\+findrelations@{db\+\_\+findrelations}}
+\index{db\+\_\+findrelations@{db\+\_\+findrelations}!Data\+Tools\+::\+D\+B\+\_\+datatools@{Data\+Tools\+::\+D\+B\+\_\+datatools}}
+\subsubsection{\texorpdfstring{db\+\_\+findrelations()}{db\_findrelations()}}
+{\footnotesize\ttfamily def Data\+Tools.\+D\+B\+\_\+datatools.\+db\+\_\+findrelations (\begin{DoxyParamCaption}\item[{}]{cursor,  }\item[{}]{search\+\_\+terms }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Find all the Drug Target relations, as well as off Target drug relations of
+relevant drugs
+:param cursor:
+:param search_terms:
+:return: List of drug relations
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_data_tools_1_1_d_b__datatools_a7037f72ba89fb8116266f6da2035ef5a}\label{namespace_data_tools_1_1_d_b__datatools_a7037f72ba89fb8116266f6da2035ef5a}} 
+\index{Data\+Tools\+::\+D\+B\+\_\+datatools@{Data\+Tools\+::\+D\+B\+\_\+datatools}!db\+\_\+findtarget\+\_\+bysynonym@{db\+\_\+findtarget\+\_\+bysynonym}}
+\index{db\+\_\+findtarget\+\_\+bysynonym@{db\+\_\+findtarget\+\_\+bysynonym}!Data\+Tools\+::\+D\+B\+\_\+datatools@{Data\+Tools\+::\+D\+B\+\_\+datatools}}
+\subsubsection{\texorpdfstring{db\+\_\+findtarget\+\_\+bysynonym()}{db\_findtarget\_bysynonym()}}
+{\footnotesize\ttfamily def Data\+Tools.\+D\+B\+\_\+datatools.\+db\+\_\+findtarget\+\_\+bysynonym (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_data_tools_1_1_d_b__datatools_adace12ff97f1c03f8beac9f2c3853972}\label{namespace_data_tools_1_1_d_b__datatools_adace12ff97f1c03f8beac9f2c3853972}} 
+\index{Data\+Tools\+::\+D\+B\+\_\+datatools@{Data\+Tools\+::\+D\+B\+\_\+datatools}!db\+\_\+findtargetsynonyms@{db\+\_\+findtargetsynonyms}}
+\index{db\+\_\+findtargetsynonyms@{db\+\_\+findtargetsynonyms}!Data\+Tools\+::\+D\+B\+\_\+datatools@{Data\+Tools\+::\+D\+B\+\_\+datatools}}
+\subsubsection{\texorpdfstring{db\+\_\+findtargetsynonyms()}{db\_findtargetsynonyms()}}
+{\footnotesize\ttfamily def Data\+Tools.\+D\+B\+\_\+datatools.\+db\+\_\+findtargetsynonyms (\begin{DoxyParamCaption}\item[{}]{curs,  }\item[{}]{target }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Finds all the synonyms of a given target.
+:param curs: Cursor
+:param target: Target to be searched
+:return: List of all the target's synonyms
+\end{DoxyVerb}
+ 

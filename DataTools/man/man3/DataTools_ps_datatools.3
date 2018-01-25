@@ -1,0 +1,204 @@
+.TH "DataTools.ps_datatools" 3 "Thu Jan 25 2018" "Data Tools Package" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DataTools.ps_datatools
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBps_read_csv\fP (filename, ps_format=True)"
+.br
+.ti -1c
+.RI "def \fBps_read_entitylist\fP (filename)"
+.br
+.ti -1c
+.RI "def \fBps_has_duplicates\fP (network)"
+.br
+.ti -1c
+.RI "def \fBps_return_duplicates\fP (network)"
+.br
+.ti -1c
+.RI "def \fBps_flag_duplicates\fP (network)"
+.br
+.ti -1c
+.RI "def \fBps_drop_duplicates\fP (network)"
+.br
+.ti -1c
+.RI "def \fBps_clean_ref\fP (network)"
+.br
+.ti -1c
+.RI "def \fBps_clean_sentence_tags\fP (s)"
+.br
+.ti -1c
+.RI "def \fBps_clear_end\fP (s)"
+.br
+.ti -1c
+.RI "def \fBps_replace_syntax\fP (s)"
+.br
+.ti -1c
+.RI "def \fBps_perceptronify\fP (in_network, max_indegree=8)"
+.br
+.ti -1c
+.RI "def \fBps_write_csv\fP (network, csv_name='network_please_rename\&.csv', exclude_unknown=False)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+This Module is for use in importing networks from Pathway Studio,
+as well as exporting networks to other consumers
+
+.fi
+.PP
+ 
+.SH "Function Documentation"
+.PP 
+.SS "def DataTools\&.ps_datatools\&.ps_clean_ref ( network)"
+
+.PP
+.nf
+Take in network, clean ALL references column of PS tags
+:param network: network to have references cleaned from
+:return: Network, with new Clean_References column.
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.ps_datatools\&.ps_clean_sentence_tags ( s)"
+
+.PP
+.nf
+Removes PS tags from SINGLE reference.
+:param s:
+:return:
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.ps_datatools\&.ps_clear_end ( s)"
+
+.PP
+.nf
+Removes trailing whitespace from PS sentences.
+:param s:
+:return:
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.ps_datatools\&.ps_drop_duplicates ( network)"
+
+.PP
+.nf
+Drops Duplicates from network
+:param network:
+:return: network df minus the duplicates
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.ps_datatools\&.ps_flag_duplicates ( network)"
+
+.PP
+.nf
+Changes Duplicated bool to True if duplicated.
+:param network:
+:return:
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.ps_datatools\&.ps_has_duplicates ( network)"
+
+.PP
+.nf
+Boolean check to see if there are duplicated rows
+:param network:
+:return:
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.ps_datatools\&.ps_perceptronify ( in_network,  max_indegree = \fC8\fP)"
+
+.PP
+.nf
+Function to create a perceptron network based on input network from pathway studio. Splits nodes with high
+in-degrees into a sub network of nodes that feed into a perceptron node, thus limiting the number of
+edges coming into any single node.
+
+:param in_network: File Location of network to perceptronify
+:param max_indegree: Max number of edges node can have coming in.
+:return: Network that has been perceptronified.
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.ps_datatools\&.ps_read_csv ( filename,  ps_format = \fCTrue\fP)"
+
+.PP
+.nf
+Read CSV from Pathway Studio, with or without initial data clean
+:param filename: File to be read
+:param ps_format: Boolean to format PS raw to cleaned
+:return: Raw pandas DataFrame, or cleaned pandas DF
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.ps_datatools\&.ps_read_entitylist ( filename)"
+
+.PP
+.nf
+Read the Pathway Studio Entity List file export
+:param filename: path/to/file
+:return: pandas DataFrame of Name and Alias
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.ps_datatools\&.ps_replace_syntax ( s)"
+
+.PP
+.nf
+Takes in sentence s and removes PS internal formatting
+:param s: Sentence to be formatted
+:return: cleaned sentence.
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.ps_datatools\&.ps_return_duplicates ( network)"
+
+.PP
+.nf
+Returns duplicated rows in DF
+:param network:
+:return:
+
+.fi
+.PP
+ 
+.SS "def DataTools\&.ps_datatools\&.ps_write_csv ( network,  csv_name = \fC'network_please_rename\&.csv'\fP,  exclude_unknown = \fCFalse\fP)"
+
+.PP
+.nf
+Write network, formatted to CSV
+
+:param network: network to be written to csv.
+:param csv_name: Name for new file, defaulted 'network_please_rename.csv'
+:param exclude_unknown: flag to exclude rows where Polarity is unknown
+:return: none
+
+.fi
+.PP
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Data Tools Package from the source code\&.

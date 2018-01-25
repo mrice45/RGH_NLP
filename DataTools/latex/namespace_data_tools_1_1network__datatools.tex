@@ -1,0 +1,41 @@
+\hypertarget{namespace_data_tools_1_1network__datatools}{}\section{Data\+Tools.\+network\+\_\+datatools Namespace Reference}
+\label{namespace_data_tools_1_1network__datatools}\index{Data\+Tools.\+network\+\_\+datatools@{Data\+Tools.\+network\+\_\+datatools}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespace_data_tools_1_1network__datatools_a287e9a5a04e363791a6edd7788c4ab6a}{findnetworknodes}} (network)
+\item 
+def \mbox{\hyperlink{namespace_data_tools_1_1network__datatools_a034bb7ad9bd12784116a3653e97ed31a}{findaliases}} (entitylist)
+\item 
+def \mbox{\hyperlink{namespace_data_tools_1_1network__datatools_a3454d576ee67753afd1470118377dab5}{perceptronify}} (network, indegree\+\_\+max=8)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespace_data_tools_1_1network__datatools_a034bb7ad9bd12784116a3653e97ed31a}\label{namespace_data_tools_1_1network__datatools_a034bb7ad9bd12784116a3653e97ed31a}} 
+\index{Data\+Tools\+::network\+\_\+datatools@{Data\+Tools\+::network\+\_\+datatools}!findaliases@{findaliases}}
+\index{findaliases@{findaliases}!Data\+Tools\+::network\+\_\+datatools@{Data\+Tools\+::network\+\_\+datatools}}
+\subsubsection{\texorpdfstring{findaliases()}{findaliases()}}
+{\footnotesize\ttfamily def Data\+Tools.\+network\+\_\+datatools.\+findaliases (\begin{DoxyParamCaption}\item[{}]{entitylist }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Take in a dataframe that has nodes and their aliases, return a list that joins the Aliases
+:param entitylist:
+:return: List of [Name, Alias]
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_data_tools_1_1network__datatools_a287e9a5a04e363791a6edd7788c4ab6a}\label{namespace_data_tools_1_1network__datatools_a287e9a5a04e363791a6edd7788c4ab6a}} 
+\index{Data\+Tools\+::network\+\_\+datatools@{Data\+Tools\+::network\+\_\+datatools}!findnetworknodes@{findnetworknodes}}
+\index{findnetworknodes@{findnetworknodes}!Data\+Tools\+::network\+\_\+datatools@{Data\+Tools\+::network\+\_\+datatools}}
+\subsubsection{\texorpdfstring{findnetworknodes()}{findnetworknodes()}}
+{\footnotesize\ttfamily def Data\+Tools.\+network\+\_\+datatools.\+findnetworknodes (\begin{DoxyParamCaption}\item[{}]{network }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Take a network with columns 'Source' and 'Target',
+Return unique nodes in said network
+:param network:
+:return: list of unique nodes
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_data_tools_1_1network__datatools_a3454d576ee67753afd1470118377dab5}\label{namespace_data_tools_1_1network__datatools_a3454d576ee67753afd1470118377dab5}} 
+\index{Data\+Tools\+::network\+\_\+datatools@{Data\+Tools\+::network\+\_\+datatools}!perceptronify@{perceptronify}}
+\index{perceptronify@{perceptronify}!Data\+Tools\+::network\+\_\+datatools@{Data\+Tools\+::network\+\_\+datatools}}
+\subsubsection{\texorpdfstring{perceptronify()}{perceptronify()}}
+{\footnotesize\ttfamily def Data\+Tools.\+network\+\_\+datatools.\+perceptronify (\begin{DoxyParamCaption}\item[{}]{network,  }\item[{}]{indegree\+\_\+max = {\ttfamily 8} }\end{DoxyParamCaption})}
+

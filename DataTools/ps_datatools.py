@@ -183,7 +183,7 @@ def ps_perceptronify(in_network, max_indegree=8):
     network['Target'] = rawnetwork['Target']
     network['Polarity'] = rawnetwork['Polarity']
 
-    if 'Data' in list(network.columns):
+    if 'Data' in list(network.columns.values):
         network['Data'] = rawnetwork['Data']
 
     g = network.groupby('Target')
@@ -199,7 +199,7 @@ def ps_perceptronify(in_network, max_indegree=8):
     temp = network.loc[network.Source.apply(lambda x: x in perceptron_base)]['Source'].apply(__renamesource)
     network.loc[temp.index, 'Source'] = temp.values
 
-    if network['Data']:
+    if 'Data' in list(network.columns.values):
         network = network[['Source', 'Target', 'Polarity', 'Data']]
     else:
         network = network[['Source', 'Target', 'Polarity']]

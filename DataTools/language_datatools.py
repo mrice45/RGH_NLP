@@ -127,7 +127,7 @@ def __value_of(sentiment):
     return 0
 
 
-def network_score(network, add_polarity=True, flag_changes=True):
+def run_sentiment_analysis(network, add_polarity=True, flag_changes=True):
     """
     Runs Sentiment analysis on a network and returns an analyzed and scored network.
     :param network:
@@ -136,10 +136,14 @@ def network_score(network, add_polarity=True, flag_changes=True):
     :return: scored network
     """
     score = []
-    for chunk in network['Data']:
+    data = [col for col in network.columns if ('msrc' or 'Data') in col]
+    for chunk in network[data]:
         split_sentences = split(chunk)
         pos_sentences = pos_tag(split_sentences)
-        tagged_sentences = DictionaryTagger(['positive.yml', 'negative.yml', 'inv.yml']).tag(pos_sentences)
+        tagged_sentences = DictionaryTagger(
+        ['/Users/markrice/Documents/GitHub/RGH_NLP/DataTools/positive.yml',
+        '/Users/markrice/Documents/GitHub/RGH_NLP/DataTools/negative.yml', 
+        './inv.yml']).tag(pos_sentences)
         relationship_score = sentiment_score(tagged_sentences)
 
         score.append(relationship_score)
